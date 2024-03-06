@@ -1,0 +1,15 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.access {
+
+  h2 {
+    font-size: 40px;
+    margin-top: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .map {
+    margin: 40px 0;
+  }
+}

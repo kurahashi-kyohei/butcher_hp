@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+/*************************
+使いたいファイルで呼び出してbaseWidthの変数を指定、
+デザイン上のpixel値を入力するとvwの値で返してきます
+
+例：
+$PCBaseWidth: 1440;
+$SPBaseWidth: 375;
+font-size: calcVw(14,$PCBaseWidth);
+width: calcVw(50,$SPBaseWidth);
+***************************/
+
+//ピクセルをvwに変換
+@function calcVw($target, $parent_width: 375) {
+  @return math.div($target, $parent_width) * 100vw;
+}

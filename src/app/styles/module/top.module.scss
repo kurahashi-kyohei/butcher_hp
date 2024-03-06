@@ -1,0 +1,9 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}

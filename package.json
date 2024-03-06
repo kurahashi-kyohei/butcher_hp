@@ -1,5 +1,5 @@
 {
-  "name": "butcher-hp-2",
+  "name": "butcher-hp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fullcalendar/core": "^6.1.11",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/google-calendar": "^6.1.11",
+    "@fullcalendar/interaction": "^6.1.11",
+    "@fullcalendar/react": "^6.1.11",
+    "@fullcalendar/resource-timeline": "^6.1.11",
+    "@fullcalendar/timegrid": "^6.1.11",
+    "@next/third-parties": "^14.1.0",
+    "date-fns": "^3.3.1",
+    "next": "^14.1.0",
+    "next-transpile-modules": "^10.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "react-router-dom": "^6.22.1",
+    "react-scroll": "^1.9.0",
+    "sass": "^1.71.1",
+    "undefined": "^0.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-scroll": "^1.8.10",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "typescript": "^5"
   }
 }

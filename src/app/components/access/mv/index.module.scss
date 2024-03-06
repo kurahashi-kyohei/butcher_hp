@@ -1,0 +1,56 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.mv_container {
+  width: 100%;
+
+  .mv{
+    position: relative;
+    width: 100%;
+    height: 46vw;
+    overflow: hidden;
+    position: relative;
+    background-image: url('/access/mv/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(sp) {
+      height: 100vw;
+      gap: calcVw(20);
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+    color: #fff;
+
+    @include mq(sp) {
+      font-size: calcVw(40);
+    }
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    animation-name: rise_fall;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+    @include mq(sp) {
+      width: calcVw(40);
+      height: calcVw(40);
+    }
+
+    img {
+      position: absolute;
+    }
+  }
+}

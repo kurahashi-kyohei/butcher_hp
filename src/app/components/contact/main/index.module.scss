@@ -1,0 +1,98 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+
+  @include mq(sp) {
+    padding: calcVw(40) calcVw(20);
+  }
+
+  .img_wrapper {
+    width: 90%;
+    height: 30vh;
+    position: relative;
+    padding: 40px;
+
+    @include mq(sp) {
+      padding: calcVw(20);
+      width: 95vw;
+      height: 40vh;
+    }
+
+    .img {
+      position: absolute;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    color: #333;
+
+    @include mq(sp) {
+      gap: calcVw(40);
+      padding: calcVw(40) 0;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+
+      @include mq(sp) {
+        font-size: calcVw(26);
+      }
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 100;
+      text-align: center;
+
+      @include mq(sp) {
+        font-size: calcVw(15);
+      }
+    }
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    .sns {
+      display: flex;
+      gap: 20px;
+
+      @include mq(sp) {
+        gap: calcVw(20);
+      }
+
+      .icon_wrapper {
+        width: 30px;
+        height: 30px;
+        position: relative;
+
+        @include mq(sp) {
+          width: calcVw(30);
+          height: calcVw(30);
+        }
+  
+        .icon {
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
