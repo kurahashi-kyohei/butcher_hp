@@ -1,10 +1,10 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .calendar {
-  margin: 20px 0px 40px;
+  margin: 20px 0px 0px;
 
   @include mq(sp){
-    margin: calcVw(20) 0 calcVw(40);
+    margin: calcVw(20) 0 0;
   }
 
   .nav {

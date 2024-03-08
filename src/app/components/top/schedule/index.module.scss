@@ -48,7 +48,8 @@
 
       @include mq(sp) {
         font-size: calcVw(40);
-        padding-bottom: calcVw(15);
+        padding-bottom: calcVw(10);
+        text-align: center;
       }
     }
 
@@ -99,11 +100,13 @@
       align-self: center;
       text-align: center;
       padding: 15px;
+      margin-top: 20px;
       border: 2.5px solid #fff;
       color: #fff;
 
       @include mq(sp) {
         padding: calcVw(15);
+        margin-top: calcVw(20);
         border: calcVw(2.5) solid #fff;
       }
 

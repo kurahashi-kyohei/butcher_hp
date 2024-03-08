@@ -27,8 +27,8 @@ const HeaderSp = () => {
       href: "/schedule"
     },
     {
-      title: "ACCESS",
-      href: "/access"
+      title: "ABOUT",
+      href: "/about"
     },
     {
       title: "CONTACT",
