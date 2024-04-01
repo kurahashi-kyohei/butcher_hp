@@ -13,7 +13,7 @@ const satisfy = Satisfy({
   weight: "400",
 });
 
-const Menu = () => {
+const Menu: React.FC = () => {
   const [isFadeIn, setIsFadeIn] = useState<boolean>(false);
   const [isSlide, setIsSlide] = useState<boolean>(false);
 

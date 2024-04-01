@@ -7,10 +7,22 @@
   }
 }
 
+@keyframes slide_left {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
+
 @keyframes slide_right {
   0% {
     opacity: 0;
-    transform: translateX(30%) rotate(45deg);
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
   }
   100% {
     opacity: 1;

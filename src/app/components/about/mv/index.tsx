@@ -4,7 +4,7 @@ import { satisfy } from '@/app/styles/font';
 
 const Mv = () => {
   return (
-    <div className={Style.mv_container}>
+    <div id='mv' className={Style.mv_container}>
       <div className={Style.mv}>
         <h2 className={satisfy.className}>About</h2>
         <div className={Style.arrow}>

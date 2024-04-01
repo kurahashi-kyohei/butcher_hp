@@ -1,7 +1,7 @@
 import type { NextPage, Metadata } from 'next';
-import Head from 'next/head';
 //components
 import Mv from '../components/menu/mv';
+import Main from '../components/menu/main';
 
 export const metadata: Metadata = {
   title: "Menu | ブッチャー丸幸",
@@ -12,6 +12,7 @@ const menu: NextPage = () => {
   return (
     <div>
         <Mv />
+        <Main />
     </div>
   )
 }

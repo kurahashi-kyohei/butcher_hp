@@ -108,7 +108,7 @@
 
   .slide {
     @include mq(sp) {
-      animation-name: slide_right;
+      animation-name: slide_left;
       animation-duration: 3s;
       animation-fill-mode: forwards;
       transform-origin: right bottom;

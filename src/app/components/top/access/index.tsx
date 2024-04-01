@@ -9,7 +9,7 @@ const satisfy = Satisfy({
   weight: "400",
 });
 
-const Access = () => {
+const Access: React.FC = () => {
   return (
     <div className={Style.access}>
       <h2 className={satisfy.className}>Access</h2>

@@ -1,5 +1,5 @@
 import { NextPage, Metadata } from 'next';
-import Mv from '../components/contact/mv';
+import Mv from '../components/menu/mv';
 import Main from '../components/contact/main';
 
 export const metadata: Metadata = {

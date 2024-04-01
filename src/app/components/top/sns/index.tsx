@@ -10,7 +10,7 @@ const satisfy = Satisfy({
   weight: "400",
 });
 
-const snsItem = [
+const snsItem: {title: string, href: string, icon: string}[] = [
   {
     title: "Instagram",
     href: "/Instagram",
@@ -28,7 +28,7 @@ const snsItem = [
   },
 ];
 
-const Sns = () => {
+const Sns: React.FC = () => {
   return (
     <div className={Style.sns}>
       <h2 className={satisfy.className}>SNS</h2>

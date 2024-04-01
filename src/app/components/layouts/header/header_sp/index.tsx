@@ -19,16 +19,16 @@ const HeaderSp = () => {
       href: "/"
     },
     {
+      title: "ABOUT",
+      href: "/about"
+    },
+    {
       title: "MENU",
       href: "/menu"
     },
     {
       title: "SCHEDULE",
       href: "/schedule"
-    },
-    {
-      title: "ABOUT",
-      href: "/about"
     },
     {
       title: "CONTACT",

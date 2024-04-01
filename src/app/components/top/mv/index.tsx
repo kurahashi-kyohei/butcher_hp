@@ -1,7 +1,7 @@
 import React from 'react';
 import Style from './index.module.scss';
 
-const Mv = () => {
+const Mv: React.FC = () => {
   return (
     <div id="mv" className={Style.mv}>
       <div className={Style.img_box}>
