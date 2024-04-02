@@ -35,14 +35,15 @@
 
       .company {
         font-size: 24px;
-        color: #fff;
+        font-weight: 400;
+        color: #c0c0c0;
       }
     }
 
     .menu {
       display: flex;
       justify-content: space-between;
-      gap: 10px;
+      gap: 15px;
       color: #c0c0c0;
 
       .item {

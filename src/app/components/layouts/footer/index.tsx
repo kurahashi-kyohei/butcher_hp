@@ -12,6 +12,10 @@ const Footer = () => {
       href: "/"
     },
     {
+      title: "NEWS",
+      href: "/news"
+    },
+    {
       title: "MENU",
       href: "/menu"
     },
@@ -26,6 +30,10 @@ const Footer = () => {
     {
       title: "CONTACT",
       href: "/contact"
+    },
+    {
+      title: "ABOUT",
+      href: "/about"
     }
   ];
 

@@ -5,13 +5,8 @@ import Style from './index.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Satisfy } from 'next/font/google';
 
-const satisfy = Satisfy({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-});
+
 
 const Menu: React.FC = () => {
   const [isFadeIn, setIsFadeIn] = useState<boolean>(false);
@@ -30,7 +25,7 @@ const Menu: React.FC = () => {
   return (
     <div className={Style.menu}>
       <div className={Style.text}>
-        <h2 className={satisfy.className}>Menu</h2>
+        <h2>Menu</h2>
         <div className={isFadeIn ? Style.fadein : ''}>
           <p>
             テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。<br/>

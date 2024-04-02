@@ -2,8 +2,8 @@
 
 import { NextPage } from 'next';
 import { usePathname } from 'next/navigation'; 
-import Mv from '@/app/components/menu/mv';
-import MerchandisesContainer from '@/app/components/menu/merchandisesContainer';
+import Mv from '../../../components/menu/mv';
+import MerchandisesContainer from '../../../components/menu/merchandisesContainer';
 import React from 'react'
 
 const Merchandises: NextPage = () => {

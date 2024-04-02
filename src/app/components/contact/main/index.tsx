@@ -5,23 +5,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LineButton from '../../parts/line_button';
 
-const snsItem = [
-  {
-    title: "Instagram",
-    href: "/Instagram",
-    icon: "/top/sns/instagram.svg"
-  },
-  {
-    title: "Twitter",
-    href: "/Twitter",
-    icon: "/top/sns/twitter.svg"
-  },
-  {
-    title: "Facebook",
-    href: "/Facebook",
-    icon: "/top/sns/facebook.svg"
-  },
-];
+// const snsItem = [
+//   {
+//     title: "Instagram",
+//     href: "/Instagram",
+//     icon: "/top/sns/instagram.svg"
+//   },
+//   {
+//     title: "Twitter",
+//     href: "/Twitter",
+//     icon: "/top/sns/twitter.svg"
+//   },
+//   {
+//     title: "Facebook",
+//     href: "/Facebook",
+//     icon: "/top/sns/facebook.svg"
+//   },
+// ];
 
 const Main = () => {
   return (
@@ -33,7 +33,7 @@ const Main = () => {
         <h2>ブッチャー丸幸へ問い合わせ</h2>
         <p>LINE以外にも以下のSNSからのダイレクトメッセージからもお問い合わせを受け付けております。<br />SNSのフォローも大歓迎ですので、お気軽にお問い合わせ下さい。</p>
       </div>
-      <div className={Style.link}>
+      {/* <div className={Style.link}>
         <LineButton />
         <div className={Style.sns}>
           {snsItem.map((item, index) => {
@@ -47,7 +47,7 @@ const Main = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

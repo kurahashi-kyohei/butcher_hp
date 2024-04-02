@@ -1,9 +1,9 @@
 import { NextPage, Metadata } from 'next';
-import Mv from '../components/contact/mv';
-import Main from '../components/contact/main';
+import Mv from '../components/news/mv';
+import Main from '../components/news/main';
 
 export const metadata: Metadata = {
-  title: "Contact | ブッチャー丸幸",
+  title: "News | ブッチャー丸幸",
   description: "北海道札幌市豊平区にある精肉店です。",
 };
 

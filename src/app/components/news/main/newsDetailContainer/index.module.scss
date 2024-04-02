@@ -1,0 +1,61 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.news_detail {
+  padding: 60px 20px 40px;
+
+  @include mq(sp) {
+    padding: calcVw(40) calcVw(20);
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+
+    @include mq(sp) {
+      gap: calcVw(60);
+    }
+
+    .title {
+      display: grid;
+      width: 100%;
+      max-width: 1200px;
+
+      @include mq(sp) {
+        gap: calcVw(10);
+      }
+
+      h2 {
+        font-size: 26px;
+        font-weight: 500;
+        justify-self: center;
+        
+        @include mq(sp) {
+          font-size: calcVw(24);
+          
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        color: #555;
+        font-weight: 300;
+        justify-self: flex-end;
+
+        @include mq(sp) {
+          font-size: calcVw(16);
+        }
+      }
+    }
+
+    .desc {
+      font-size: 18px;
+
+      @include mq(sp) {
+        font-size: calcVw(18);
+      }
+    }
+  }
+}

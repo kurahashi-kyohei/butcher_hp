@@ -19,8 +19,7 @@ const CategoryContainer: React.FC<{ path: string }> = ({ path }) => {
               <p>{merchandise.price}円（税込）</p>
             </div>
           </Link>
-          :
-          ''
+          : ''
         );
       })}
       </div>

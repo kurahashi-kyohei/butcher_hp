@@ -1,0 +1,88 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.news {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  @include mq(sp) {
+    padding: calcVw(40) calcVw(20);
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+
+    @include mq(sp) {
+      font-size: calcVw(40);
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #c0c0c0;
+
+    @include mq(sp) {
+      border-top: calcVw(1) solid #c0c0c0;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 20px 0;
+      border-bottom: 1px solid #c0c0c0;
+
+      @include mq(sp) {
+        gap: calcVw(20);
+        padding: calcVw(20) 0 ;
+        border-top: calcVw(1) solid #c0c0c0;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 300;
+        color: #555;
+        
+        @include mq(sp) {
+          font-size: calcVw(12);
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        
+        @include mq(sp) {
+          font-size: calcVw(16);
+        }
+      }
+    }
+  }
+
+  .button {
+    display: inline;
+    padding: 15px;
+    border: 2.5px solid #555;
+    color: #555;
+
+
+    @include mq(sp) {
+      padding: calcVw(15);
+      border: calcVw(2.5) solid #555;
+    }
+
+    span {
+      font-size: 22px;
+
+      @include mq(sp) {
+        font-size: calcVw(22);
+      }
+    }
+  }
+}

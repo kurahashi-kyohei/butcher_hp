@@ -19,8 +19,8 @@ const HeaderPc = () => {
       href: "/"
     },
     {
-      title: "ABOUT",
-      href: "/about"
+      title: "NEWS",
+      href: "/news"
     },
     {
       title: "MENU",
@@ -31,8 +31,16 @@ const HeaderPc = () => {
       href: "/schedule"
     },
     {
+      title: "ACCESS",
+      href: "/access"
+    },
+    {
       title: "CONTACT",
       href: "/contact"
+    },
+    {
+      title: "ABOUT",
+      href: "/about"
     }
   ];
   
@@ -53,7 +61,7 @@ const HeaderPc = () => {
         <div className={Style.title}>
           <Link href="/" className={Style.title}>
             <Image src="/global/icon.svg" alt="アイコン" className={Style.icon} width={30} height={30} />
-            <h1 className={`${Style.company} ${mincho.className}`}>ブッチャー丸幸</h1>
+            <h1 className={Style.company}>ブッチャー丸幸</h1>
           </Link>
         </div>
         <div className={Style.menu}>

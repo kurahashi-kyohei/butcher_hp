@@ -2,8 +2,8 @@
 
 import { NextPage } from 'next';
 import { usePathname } from 'next/navigation'; 
-import CategoryContainer from '@/app/components/menu/categoryContainer';
-import Mv from '@/app/components/menu/mv';
+import CategoryContainer from '../../components/menu/categoryContainer';
+import Mv from '../../components/menu/mv';
 
 const Category: NextPage = () => {
   const path = usePathname();

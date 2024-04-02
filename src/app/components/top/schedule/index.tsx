@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Calendar from '../../parts/calendar';
-import { satisfy } from '@/app/styles/font';
 
 const Schedule: React.FC = () => {
   const [isFadeIn, setIsFadeIn] = useState<boolean>(false);
@@ -25,10 +24,10 @@ const Schedule: React.FC = () => {
   return (
     <div className={Style.schedule}>
       <div className={isSlide ? `${Style.img_wrapper} ${Style.slide}` : `${Style.img_wrapper}`}>
-        <Image src='/top/schedule/schedule.jpeg' alt='' className={Style.img} layout='fill' objectFit='contain'/>
+        <Image src='/top/schedule/schedule.JPG' alt='' className={Style.img} layout='fill' objectFit='contain'/>
       </div>
       <div className={Style.container}>
-        <h1 className={satisfy.className}>Schedule</h1>
+        <h1>Schedule</h1>
         <div className={isFadeIn ? `${Style.fadein} ${Style.calendar}` : `${Style.calendar}`}>
           <Calendar />
         </div>

@@ -19,8 +19,8 @@ const HeaderSp = () => {
       href: "/"
     },
     {
-      title: "ABOUT",
-      href: "/about"
+      title: "NEWS",
+      href: "/news"
     },
     {
       title: "MENU",
@@ -31,8 +31,16 @@ const HeaderSp = () => {
       href: "/schedule"
     },
     {
+      title: "ACCESS",
+      href: "/access"
+    },
+    {
       title: "CONTACT",
       href: "/contact"
+    },
+    {
+      title: "ABOUT",
+      href: "/about"
     }
   ];
   

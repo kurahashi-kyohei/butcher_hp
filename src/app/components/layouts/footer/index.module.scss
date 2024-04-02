@@ -40,13 +40,20 @@
 
       span {
         color: #000;
+        font-size: 14px;
+
+        @include mq(sp) {
+          font-size: calcVw(14);
+        }
       }
 
       &::after {
         content: '/';
+        font-size: 14px;
         padding-left:20px;
 
         @include mq(sp) {
+          font-size: calcVw(14);
           padding-left: calcVw(20);
         }
       }
@@ -71,6 +78,15 @@
       padding: calcVw(5) calcVw(20);
       border: calcVw(2) solid #696969;
       font-size: calcVw(14);
+    }
+  }
+
+  p {
+    color: #000;
+    font-size: 10px;
+
+    @include mq(sp) {
+      font-size: calcVw(10);
     }
   }
 }
