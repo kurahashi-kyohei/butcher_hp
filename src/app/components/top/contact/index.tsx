@@ -4,7 +4,7 @@ import Style from './index.module.scss';
 const Contact = () => {
   return (
     <div className={Style.contact}>
-      <h2>Contact</h2>
+      <h2>お問い合わせ</h2>
       <div className={Style.text}>
         <p>ご購入の際、何かご不明点がございましたら、こちらの電話番号までお問い合わせください。<br />営業時間外は受け付けておりません。</p>
         <div className={Style.telephone_number}>

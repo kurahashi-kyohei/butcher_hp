@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
   return (
     <div className={Style.menu}>
       <div className={Style.text}>
-        <h2>Menu</h2>
+        <h2>メニュー</h2>
           <div className={Style.pickup}>
             <h3>おすすめランキング</h3>
             <div className={Style.ranking}>

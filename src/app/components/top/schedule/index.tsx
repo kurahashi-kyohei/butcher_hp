@@ -27,7 +27,7 @@ const Schedule: React.FC = () => {
         <Image src='/top/schedule/schedule.JPG' alt='' className={Style.img} layout='fill' objectFit='contain'/>
       </div>
       <div className={Style.container}>
-        <h1>Schedule</h1>
+        <h1>スケジュール</h1>
         <div className={isFadeIn ? `${Style.fadein} ${Style.calendar}` : `${Style.calendar}`}>
           <Calendar />
         </div>

@@ -2,6 +2,7 @@
 
 .access {
   padding: 40px 0;
+
   @include mq(sp) {
     padding: calcVw(20) 0 ;
   }

@@ -5,7 +5,7 @@ import Link from 'next/link';
 const News = () => {
   return (
     <div className={Style.news}>
-      <h2>News</h2>
+      <h2>ニュース</h2>
       <div className={Style.container}>
         {news.map((news, index) => {
           return(

@@ -5,10 +5,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid #777;
+  border-bottom: 2px solid #111;
 
   @include mq(sp) {
     padding: calcVw(40) calcVw(20);
+    border: calcVw(2) solid #111;
   }
 
   h2 {

@@ -5,7 +5,7 @@ import { GoogleMapsEmbed } from '@next/third-parties/google';
 const Access: React.FC = () => {
   return (
     <div className={Style.access}>
-      <h2>Access</h2>
+      <h2>アクセス</h2>
       <div className={Style.map}>
         <GoogleMapsEmbed
         apiKey="AIzaSyBbuEaGef9u_m4a2ZRLkZeGWE21vQ_Nv6I"
