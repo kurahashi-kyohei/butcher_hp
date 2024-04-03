@@ -31,23 +31,13 @@ const Main = () => {
       </div>
       <div className={Style.text}>
         <h2>ブッチャー丸幸へ問い合わせ</h2>
-        <p>LINE以外にも以下のSNSからのダイレクトメッセージからもお問い合わせを受け付けております。<br />SNSのフォローも大歓迎ですので、お気軽にお問い合わせ下さい。</p>
-      </div>
-      {/* <div className={Style.link}>
-        <LineButton />
-        <div className={Style.sns}>
-          {snsItem.map((item, index) => {
-            return(
-              <Link key={index} href={item.href} className={Style.item}>
-                <div className={Style.icon_wrapper}>
-                  <Image src={item.icon} alt='アイコン' layout='fill' objectFit='contain'/>
-                </div>
-                
-              </Link>
-            );
-          })}
+        <p>ご購入の際、何かご不明点がございましたら、こちらの電話番号までお問い合わせください。<br />営業時間外は受け付けておりません。</p>
+
+        <div className={Style.telephone_number}>
+          <h4>電話番号 : 852-6398</h4>
+          <h4>FAX : 851-0815</h4>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }

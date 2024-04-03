@@ -1,14 +1,13 @@
-import Head from "next/head";
 import { NextPage, Metadata } from "next";
 import Mv from "../components/access/mv";
-import Main from "../components/about/main";
+import Main from "../components/access/main";
 
 export const metadata: Metadata = {
-  title: "About | ブッチャー丸幸",
+  title: "アクセス | ブッチャー丸幸",
   description: "北海道札幌市豊平区にある精肉店です。",
 };
 
-const About: NextPage = () => {
+const Access: NextPage = () => {
   return (
     <>
       <Mv />
@@ -17,4 +16,4 @@ const About: NextPage = () => {
   )
 }
 
-export default About;
+export default Access;

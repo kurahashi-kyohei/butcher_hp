@@ -4,45 +4,64 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Style from './index.module.scss'
 import { useState, useEffect } from 'react';
-import { Hina_Mincho } from 'next/font/google';
-
-const mincho = Hina_Mincho({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const HeaderSp = () => {
   const headerItem = [
     {
-      title: "HOME",
+      title: "トップ",
       href: "/"
     },
     {
-      title: "NEWS",
+      title: "新着情報",
       href: "/news"
     },
     {
-      title: "MENU",
+      title: "メニュー",
       href: "/menu"
     },
     {
-      title: "SCHEDULE",
+      title: "スケジュール",
       href: "/schedule"
     },
     {
-      title: "ACCESS",
+      title: "アクセス",
       href: "/access"
     },
     {
-      title: "CONTACT",
+      title: "お問い合わせ",
       href: "/contact"
-    },
-    {
-      title: "ABOUT",
-      href: "/about"
     }
   ];
+  // const headerItem = [
+  //   {
+  //     title: "HOME",
+  //     href: "/"
+  //   },
+  //   {
+  //     title: "NEWS",
+  //     href: "/news"
+  //   },
+  //   {
+  //     title: "MENU",
+  //     href: "/menu"
+  //   },
+  //   {
+  //     title: "SCHEDULE",
+  //     href: "/schedule"
+  //   },
+  //   {
+  //     title: "ACCESS",
+  //     href: "/access"
+  //   },
+  //   {
+  //     title: "CONTACT",
+  //     href: "/contact"
+  //   },
+  //   {
+  //     title: "ABOUT",
+  //     href: "/about"
+  //   }
+  // ];
   
   const [isFixed, setIsFixed] = useState<boolean>(false);
 
@@ -68,7 +87,7 @@ const HeaderSp = () => {
           <div className={Style.title}>
             <Link href="/" className={Style.title}>
               <Image src="/global/icon.svg" alt="アイコン" className={Style.icon} width={30} height={30} />
-              <h1 className={`${Style.company} ${mincho.className}`}>ブッチャー丸幸</h1>
+              <h1 className={Style.company}>ブッチャー丸幸</h1>
             </Link>
           </div>
           <div className={isOpen ? `${Style.button} ${Style.cross}` : `${Style.button}` } onClick={handleOpen}>

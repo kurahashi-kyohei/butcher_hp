@@ -4,45 +4,64 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Style from './index.module.scss'
 import { useState, useEffect } from 'react';
-import { Hina_Mincho } from 'next/font/google';
-
-const mincho = Hina_Mincho({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const HeaderPc = () => {
   const headerItem = [
     {
-      title: "HOME",
+      title: "トップ",
       href: "/"
     },
     {
-      title: "NEWS",
+      title: "新着情報",
       href: "/news"
     },
     {
-      title: "MENU",
+      title: "メニュー",
       href: "/menu"
     },
     {
-      title: "SCHEDULE",
+      title: "スケジュール",
       href: "/schedule"
     },
     {
-      title: "ACCESS",
+      title: "アクセス",
       href: "/access"
     },
     {
-      title: "CONTACT",
+      title: "お問い合わせ",
       href: "/contact"
-    },
-    {
-      title: "ABOUT",
-      href: "/about"
     }
   ];
+  // const headerItem = [
+  //   {
+  //     title: "HOME",
+  //     href: "/"
+  //   },
+  //   {
+  //     title: "NEWS",
+  //     href: "/news"
+  //   },
+  //   {
+  //     title: "MENU",
+  //     href: "/menu"
+  //   },
+  //   {
+  //     title: "SCHEDULE",
+  //     href: "/schedule"
+  //   },
+  //   {
+  //     title: "ACCESS",
+  //     href: "/access"
+  //   },
+  //   {
+  //     title: "CONTACT",
+  //     href: "/contact"
+  //   },
+  //   {
+  //     title: "ABOUT",
+  //     href: "/about"
+  //   }
+  // ];
   
   const [isFixed, setIsFixed] = useState<boolean>(false);
 

@@ -6,9 +6,11 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  border-bottom: 1px solid #777;
 
   @include mq(sp) {
     padding: calcVw(40) calcVw(20);
+    gap: calcVw(30);
   }
 
   h2 {
@@ -16,7 +18,7 @@
     font-weight: 400;
 
     @include mq(sp) {
-      font-size: calcVw(40);
+      font-size: calcVw(32);
     }
   }
 
@@ -81,7 +83,7 @@
       font-size: 22px;
 
       @include mq(sp) {
-        font-size: calcVw(22);
+        font-size: calcVw(18);
       }
     }
   }

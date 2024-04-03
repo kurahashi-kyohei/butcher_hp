@@ -56,7 +56,7 @@
       color: #fff;
 
       @include mq(sp) {
-        font-size: calcVw(40);
+        font-size: calcVw(32);
         padding-bottom: calcVw(10);
         text-align: center;
       }
@@ -137,7 +137,7 @@
         font-size: 22px;
 
         @include mq(sp) {
-          font-size: calcVw(22);
+          font-size: calcVw(18);
         }
       }
     }

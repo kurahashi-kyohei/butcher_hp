@@ -1,28 +1,36 @@
 import Style from './index.module.scss';
-import Image from "next/image";
-import Link from "next/link";
-import merchandises from "@/app/data/merchandises";
+import { merchandises } from '@/app/data/merchandises';
+import categories from '@/app/data/category';
 
 const CategoryContainer: React.FC<{ path: string }> = ({ path }) => {
   return (
     <div className={Style.categories}>
-      <h3>商品一覧</h3>
-      <div className={Style.merchandises}>
-      {merchandises.map((merchandise, index) => {
+      {categories.map((category, index) => {
         return(
-          (`/menu/${merchandise.category}` === path)
-          ?
-          <Link key={index} href={merchandise.href} className={Style.merchandise}>
-            <Image src={merchandise.image} alt={merchandise.title} width={150} height={150}/>
-            <div className={Style.desc}>
-              <p>{merchandise.title}</p>
-              <p>{merchandise.price}円（税込）</p>
-            </div>
-          </Link>
+          (category.href === path) 
+          ? 
+          <h3 key={index}>{category.title}</h3> 
           : ''
-        );
+        )
       })}
+      <div className={Style.merchandises}>
+        {merchandises.map((merchandise, index) => {
+          return(
+            (`/menu/${merchandise.category}` === path)
+            ?
+            <div key={index} className={Style.merchandise}>
+                <p>{merchandise.title}</p>
+                <p className={Style.price}>{merchandise.price}円（税込）</p>
+              </div>
+            : ''
+          );
+        })}
       </div>
+      <div className={Style.note}>
+          <p>※ 3000円以上ご購入の方 鶏皮味付き 1pサービス致します。</p>
+          <p>※ 上記の価格は、税込価格です。</p>
+          <p>※肉相場変動により価格がたまに変わります</p>
+        </div>
     </div>
   )
 }

@@ -1,50 +1,33 @@
 type categoriesType = {
   name: string,
   href: string,
-  image: string
 }
 
 const categories = [
   {
-    title: '牛肉',
-    href: '/menu/beef',
-    image: '/menu/main/items/beef/sirloin.jpg'
-  },
-  {
     title: '豚肉',
-    href: '/menu/pork',
-    image: '/menu/main/items/pork/pork.jpg'
+    href: '/menu/pork'
   },
   {
     title: '鶏肉',
-    href: '/menu/chicken',
-    image: '/menu/main/items/chicken/chicken.jpeg'
-  },
-  {
-    title: 'バーベキュー',
-    href: '/menu/barbecue',
-    image: '/menu/main/items/barbecue/barbecue.jpg'
+    href: '/menu/chicken'
   },
   {
     title: '牛肉',
-    href: '/menu/beef',
-    image: '/menu/main/items/beef/sirloin.jpg'
+    href: '/menu/beef'
   },
   {
-    title: '豚肉',
-    href: '/menu/pork',
-    image: '/menu/main/items/pork/pork.jpg'
+    title: '十勝彩美牛',
+    href: '/menu/saibi'
   },
   {
-    title: '鶏肉',
-    href: '/menu/chicken',
-    image: '/menu/main/items/chicken/chicken.jpeg'
+    title: '加工食品',
+    href: '/menu/processing'
   },
   {
-    title: 'バーベキュー',
-    href: '/menu/barbecue',
-    image: '/menu/main/items/barbecue/barbecue.jpg'
-  }
+    title: '焼肉・バーベキュー',
+    href: '/menu/grilled'
+  },
 ]
 
 export default categories;

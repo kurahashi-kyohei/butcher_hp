@@ -8,34 +8,60 @@ import { Link as Scroll } from 'react-scroll';
 const Footer = () => {
   const footerItem = [
     {
-      title: "HOME",
+      title: "トップ",
       href: "/"
     },
     {
-      title: "NEWS",
+      title: "新着情報",
       href: "/news"
     },
     {
-      title: "MENU",
+      title: "メニュー",
       href: "/menu"
     },
     {
-      title: "SCHEDULE",
+      title: "スケジュール",
       href: "/schedule"
     },
     {
-      title: "ACCESS",
+      title: "アクセス",
       href: "/access"
     },
     {
-      title: "CONTACT",
+      title: "お問い合わせ",
       href: "/contact"
-    },
-    {
-      title: "ABOUT",
-      href: "/about"
     }
   ];
+  // const footerItem = [
+  //   {
+  //     title: "HOME",
+  //     href: "/"
+  //   },
+  //   {
+  //     title: "NEWS",
+  //     href: "/news"
+  //   },
+  //   {
+  //     title: "MENU",
+  //     href: "/menu"
+  //   },
+  //   {
+  //     title: "SCHEDULE",
+  //     href: "/schedule"
+  //   },
+  //   {
+  //     title: "ACCESS",
+  //     href: "/access"
+  //   },
+  //   {
+  //     title: "CONTACT",
+  //     href: "/contact"
+  //   },
+  //   {
+  //     title: "ABOUT",
+  //     href: "/about"
+  //   }
+  // ];
 
   return (
     <footer className={Style.footer}>

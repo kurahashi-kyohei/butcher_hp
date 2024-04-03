@@ -1,0 +1,32 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.main {
+  padding: 40px 20px;
+
+  .map {
+    margin: 40px 0;
+
+    @include mq(sp) {
+      padding: calcVw(20) 0 ;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include mq(sp) {
+      gap: calcVw(8);
+    }
+
+    p {
+      font-size: 18px;
+      text-align: center;
+
+      @include mq(sp){
+        font-size: calcVw(16);
+      }
+    }
+  }
+}

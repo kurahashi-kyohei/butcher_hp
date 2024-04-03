@@ -1,15 +1,27 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .access {
+  padding: 40px 0;
+  @include mq(sp) {
+    padding: calcVw(20) 0 ;
+  }
 
   h2 {
     font-size: 40px;
     margin-top: 40px;
     font-weight: 400;
     text-align: center;
+
+    @include mq(sp) {
+      font-size: calcVw(40);
+    }
   }
 
   .map {
     margin: 40px 0;
+
+    @include mq(sp) {
+      padding: calcVw(20) 0 ;
+    }
   }
 }

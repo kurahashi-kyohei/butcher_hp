@@ -1,2 +1,70 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
+.contact {
+  padding: 40px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #777;
+
+  @include mq(sp) {
+    padding: calcVw(40) calcVw(20);
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+
+    @include mq(sp) {
+      font-size: calcVw(32);
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 35px;
+
+    @include mq(sp) {
+      gap: calcVw(40);
+      padding-top: calcVw(35);
+    }
+
+    p {
+      font-size: 18px;
+      text-align: center;
+
+      @include mq(sp) {
+        font-size: calcVw(18);
+      }
+    }
+
+    .telephone_number {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid #111;
+      max-width: 220px;
+
+      @include mq(sp) {
+        gap: calcVw(8);
+        padding: calcVw(8);
+        border: calcVw(1) solid #111;
+        max-width: calcVw(220);
+      }
+
+      h4 {
+        font-size: 20px;
+        font-weight: 500;
+
+        @include mq(sp) {
+          font-size: calcVw(20);
+        }
+      }
+    }
+  }
+}

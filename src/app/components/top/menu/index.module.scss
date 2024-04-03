@@ -1,12 +1,13 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .menu {
-  padding: 80px 40px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 50px;
+  border-bottom: 1px solid #777;
 
   @include mq(sp) {
     padding: calcVw(40) calcVw(20);
@@ -15,11 +16,11 @@
   }
 
   .text {
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
+    align-items: center;
 
     @include mq(sp) {
       max-width: none;
@@ -28,52 +29,113 @@
 
     h2 {
       font-size: 40px;
-      padding-bottom: 30px;
       font-weight: 400;
+      align-self: start;
 
       @include mq(sp) {
-        font-size: calcVw(40);
-        padding-bottom: calcVw(30);
-        text-align: center;
+        font-size: calcVw(32);
+        align-self: center;
       }
     }
 
-    div {
+    .pickup {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      @include mq(sp) {
-        opacity: 0;
-      }
+      padding: 40px 0 60px;
 
-      p {
-        font-size: 18px;
-        padding-bottom: 45px;
-  
+      h3 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid #000;
+        font-size: 26px;
+        padding-bottom: 20px;
+        margin: 0 auto 30px;
+    
         @include mq(sp) {
-          font-size: calcVw(18);
-          padding-bottom: calcVw(30);
+          border-bottom: calcVw(2) solid #000;
+          font-size: calcVw(24);
+          padding-bottom: calcVw(15);
+          margin: 0 auto calcVw(30);
         }
       }
   
-      .button {
-        display: inline;
-        padding: 15px;
-        border: 2.5px solid red;
-        color: red;
-
+      .ranking {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 auto;
+        width: 100%;
   
         @include mq(sp) {
-          padding: calcVw(15);
-          border: calcVw(2.5) solid red;
+          gap: calcVw(20) calcVw(12);
+          justify-content: center;
         }
   
-        span {
-          font-size: 22px;
+        .merchandise {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
   
           @include mq(sp) {
-            font-size: calcVw(22);
+            gap: calcVw(8);
           }
+  
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            
+            @include mq(sp) {
+              font-size: calcVw(16);
+            }
+          }
+  
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+  
+            @include mq(sp) {
+              gap: calcVw(8);
+            }
+  
+            p {
+              font-size: 18px;
+              
+              @include mq(sp) {
+                font-size: calcVw(16);
+              } 
+            }
+    
+            .price {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    .button {
+      padding: 15px;
+      border: 2.5px solid red;
+      color: red;
+      max-width: 260px;
+      text-align: center;
+
+      @include mq(sp) {
+        padding: calcVw(15);
+        border: calcVw(2.5) solid red;
+      }
+
+      span {
+        font-size: 22px;
+
+        @include mq(sp) {
+          font-size: calcVw(18);
         }
       }
     }
