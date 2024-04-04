@@ -27,6 +27,12 @@
     margin-top: 40px;
     font-weight: 400;
     text-align: center;
+    padding: 12px 0;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border-top: 3px double #c0c0c0;
+    border-bottom: 3px double #c0c0c0;
 
     @include mq(sp) {
       font-size: calcVw(36);

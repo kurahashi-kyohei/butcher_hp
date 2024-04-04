@@ -16,10 +16,13 @@
   h2 {
     font-size: 42px;
     font-weight: 400;
-    padding-bottom: 8px;
-    max-width: 1200px;
+    padding: 12px 0;
+    max-width: 600px;
     width: 100%;
     text-align: center;
+    border-top: 3px double #c0c0c0;
+    border-bottom: 3px double #c0c0c0;
+
 
     @include mq(sp) {
       font-size: calcVw(34);

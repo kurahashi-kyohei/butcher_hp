@@ -6,6 +6,7 @@
   align-items: center;
   width: 100%;
   padding: 40px 0;
+  gap: 30px;
 
   @include mq(sp) {
     padding: calcVw(20) 0 ;
@@ -15,6 +16,12 @@
     font-size: 45px;
     font-weight: 400;
     text-align: center;
+    padding: 12px 0;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border-top: 3px double #c0c0c0;
+    border-bottom: 3px double #c0c0c0;
 
     @include mq(sp) {
       font-size: calcVw(40);
@@ -22,11 +29,32 @@
   }
 
   .map {
-    margin: 40px 0;
+    margin: 40px 0 0;
     width: 100%;
 
     @include mq(sp) {
-      margin: calcVw(30) 0 ;
+      margin: calcVw(30) 0 0 ;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 8px;
+    // padding-left: 55px;
+    // margin: 0 auto;
+
+    @include mq(sp) {
+      gap: calcVw(8);
+    }
+
+    p {
+      font-size: 18px;
+
+      @include mq(sp){
+        font-size: calcVw(16);
+      }
     }
   }
 
