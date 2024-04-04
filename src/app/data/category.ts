@@ -1,9 +1,9 @@
 type categoriesType = {
-  name: string,
+  title: string,
   href: string,
 }
 
-const categories = [
+const categories: categoriesType[] = [
   {
     title: '豚肉',
     href: '/menu/pork'

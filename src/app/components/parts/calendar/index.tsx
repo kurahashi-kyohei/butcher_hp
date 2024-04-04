@@ -1,23 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import Style from './index.module.scss'
+import Style from './index.module.scss';
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  const incrementMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
-  };
-
-  const decrementMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
-  };
-
   const now = currentDate;
   const year = now.getFullYear();
   const month = now.getMonth();
-  const today = new Date().getDate();
 
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
@@ -40,8 +31,12 @@ const Calendar = () => {
   for (let i = 1; i <= daysInMonth; i++) {
     const date = new Date(year, month, i);
     const isSunday = date.getDay() === 0;
+    //定休日を追加
+    const closeDay = [29];
+    const isCloseDay = closeDay.includes(i);
+
     dates.push(
-      <td key={`current-${i}`} className={`${i === today ? Style.today : ''} ${isSunday ? Style.sunday : ''}`}>{i}</td>
+      <td key={`current-${i}`} className={`${isCloseDay ? Style.close_day : ''} ${isSunday ? Style.sunday : ''}`}>{i}</td>
     );
   }
 
@@ -63,31 +58,26 @@ const Calendar = () => {
 
   return (
     <div className={Style.calendar}>
-          <div className={Style.nav}>
-            <div className={Style.prev} onClick={decrementMonth}>＜</div>
-            <p>{year}年 {month + 1}月</p>
-            <div className={Style.next} onClick={incrementMonth}>＞</div>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>日</th>
-                <th>月</th>
-                <th>火</th>
-                <th>水</th>
-                <th>木</th>
-                <th>金</th>
-                <th>土</th>
-              </tr>
-            </thead>
-            <tbody>
-              {weeks.map((week, index) => (
-                <tr key={index}>{week}</tr>
-              ))}
-            </tbody>
-          </table>
-          
-        </div>
+      <p>{year}年 {month + 1}月</p>
+      <table>
+        <thead>
+          <tr>
+            <th>日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+          </tr>
+        </thead>
+        <tbody>
+          {weeks.map((week, index) => (
+            <tr key={index}>{week}</tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }
 

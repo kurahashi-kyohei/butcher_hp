@@ -37,19 +37,41 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      {/* <div className={Style.all}>
+      <div className={Style.all}>
         <h3>商品一覧</h3>
-        <div className={Style.merchandises}>
-          {merchandises.map((merchandise, index) => {
+        <div className={Style.container}>
+          {categories.map((category, index) => {
             return(
-              <div key={index} className={Style.merchandise}>
-                <p>{merchandise.title}</p>
-                <p className={Style.price}>{merchandise.price}円</p>
+              <div key={index} className={Style.category}>
+                <h4>{category.title}</h4>
+                {merchandises.map((merchandise, index) => {
+                  return(
+                    (`/menu/${merchandise.category}` === category.href)
+                    ?
+                    <div key={index} className={Style.merchandise}>
+                      <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+                      <p className={Style.price}>{merchandise.price}円（税込）</p>
+                    </div>
+                    : ''
+                  );
+                })}
               </div>
             );
           })}
         </div>
-      </div> */}
+        
+        {/* <div className={Style.merchandises}>
+          {merchandises.map((merchandise, index) => {
+            return(
+              <div key={index} className={Style.merchandise}>
+                <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+                
+                <p className={Style.price}>{merchandise.price}円</p>
+              </div>
+            );
+          })}
+        </div> */}
+      </div>
       
       <div className={Style.note}>
           <p>※ 3000円以上ご購入の方 鶏皮味付き 1pサービス致します。</p>

@@ -293,7 +293,7 @@ const merchandises: merchandisesType[] = [
     category: 'grilled',
   },
   {
-    title: 'ラム肉 <br className={Style.sp_only}/> (ジンギスカン・<br className={Style.sp_only}/>しやぶ・特注ジンたれ)',
+    title: 'ラム肉 <br className={Style.sp_only}/> (ジンギスカン・しやぶ・特注ジンたれ)',
     desc: '',
     price: 240,
     category: 'grilled',
@@ -402,7 +402,7 @@ const pickupRanking: pickupRankingType[] = [
     ranking: 4
   },
   {
-    title: 'ラム肉 <br className={Style.sp_only}/>(ジンギスカン・しやぶ・特注ジンたれ)',
+    title: 'ラム肉 <br className={Style.sp_only}/> (ジンギスカン・しやぶ・特注ジンたれ)',
     desc: '',
     price: 240,
     category: 'grilled',

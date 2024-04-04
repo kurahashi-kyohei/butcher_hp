@@ -7,28 +7,12 @@
     margin: calcVw(20) 0 0;
   }
 
-  .nav {
-    color: #333;
+  p {
     font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
 
     @include mq(sp) {
       font-size: calcVw(18);
-    }
-
-    div {
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    p {
-      font-size: 18px;
-
-      @include mq(sp) {
-        font-size: calcVw(18);
-      }
     }
   }
 
@@ -101,6 +85,12 @@
 // }
 
 .sunday {
+  position: relative;
+  background-color: #fa8072 !important;
+  opacity: 0.8;
+}
+
+.close_day {
   position: relative;
   background-color: #fa8072 !important;
   opacity: 0.8;

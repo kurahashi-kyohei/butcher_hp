@@ -1,7 +1,7 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .news {
-  padding: 40px 20px;
+  padding: 80px 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +26,9 @@
 
     @include mq(sp) {
       font-size: calcVw(34);
+      padding: calcVw(12) 0;
+      border-top: calcVw(3) double #c0c0c0;
+      border-bottom: calcVw(3) double #c0c0c0;
     }
   }
 

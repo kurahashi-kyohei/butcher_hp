@@ -20,9 +20,9 @@ const CategoryContainer: React.FC<{ path: string }> = ({ path }) => {
             (`/menu/${merchandise.category}` === path)
             ?
             <div key={index} className={Style.merchandise}>
-                <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
-                <p className={Style.price}>{merchandise.price}円（税込）</p>
-              </div>
+              <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+              <p className={Style.price}>{merchandise.price}円（税込）</p>
+            </div>
             : ''
           );
         })}

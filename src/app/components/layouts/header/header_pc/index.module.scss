@@ -1,21 +1,11 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
-.fixed {
-  padding: 15px !important;
-  background: rgba(0,0,0,1) !important;
-}
-
 .header {
   z-index: 100;
-  padding: 30px 20px;
-  background: rgba(0,0,0,0.2);
-  transition: 1s all linear;
+  padding: 5px 15px;
+  background-color: #000;
   width: 100%;
   position: fixed;
-
-  &:hover {
-    background: rgba(0,0,0,1);
-  }
 
   nav {
     display: flex;
@@ -29,8 +19,8 @@
       gap: 10px;
 
       .icon {
-        width: 30px;
-        height: 30px;
+        width: 60px;
+        height: 60px;
       }
 
       h1 {

@@ -1,21 +1,11 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
-.fixed {
-  padding: calcVw(8) !important;
-  background: rgba(0,0,0,1) !important;
-}
-
 .header {
   z-index: 100;
-  padding: calcVw(8) calcVw(8);
-  background: rgba(0,0,0,0.2);
-  transition: 1s all linear;
+  padding: calcVw(5);
+  background: #000;
   width: 100%;
   position: fixed;
-
-  &:hover {
-    background: rgba(0,0,0,1);
-  }
 
   nav {
     display: flex;
@@ -29,11 +19,11 @@
       gap: calcVw(4);
 
       .icon {
-        width: calcVw(30);
-        height: calcVw(30);
+        width: calcVw(60);
+        height: calcVw(60);
       }
 
-      .company {
+      h1 {
         font-size: calcVw(24);
         font-weight: 400;
         color: #fff;
@@ -72,14 +62,12 @@
     }
 
     .cross {
-
       span {
-
         &:first-child {
           top: calcVw(18);
           left: calcVw(18);
           transform: translateY(calcVw(6)) rotate(-45deg);
-          width: 30%;
+          width: 50%;
         }
 
         &:nth-child(2) {
@@ -90,9 +78,9 @@
           top: calcVw(30);
           left: calcVw(18);
           transform: translateY(calcVw(-6)) rotate(45deg);
-          width: 30%;
+          width: 50%;
         }
-      }   
+      }  
     }
   }
   .menu {

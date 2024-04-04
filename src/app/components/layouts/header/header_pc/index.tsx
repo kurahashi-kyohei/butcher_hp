@@ -34,23 +34,12 @@ const HeaderPc = () => {
     }
   ];
 
-  const [isFixed, setIsFixed] = useState<boolean>(false);
-
-  const toggleFixed = () => {
-    window.scrollY > 3 ? setIsFixed(true) : setIsFixed(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", toggleFixed);
-    return () => window.removeEventListener("scroll", toggleFixed);
-  }, []);
-
   return (
-    <header className={isFixed ? `${Style.header} ${Style.fixed}` : `${Style.header}`}>
+    <header className={Style.header}>
       <nav>
         <div className={Style.title}>
           <Link href="/" className={Style.title}>
-            <Image src="/global/icon.svg" alt="アイコン" className={Style.icon} width={30} height={30} />
+            <Image src="/global/icon.JPG" alt="アイコン" className={Style.icon} width={50} height={50} />
             <h1 className={mincho.className}>ブッチャー丸幸</h1>
           </Link>
         </div>

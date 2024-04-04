@@ -35,6 +35,9 @@
 
     @include mq(sp) {
       font-size: calcVw(36);
+      padding: calcVw(12) 0;
+      border-top: calcVw(3) double #c0c0c0;
+      border-bottom: calcVw(3) double #c0c0c0;
     }
   }
 

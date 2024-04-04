@@ -16,7 +16,7 @@ const Access: React.FC = () => {
         />
       </div>
       <div className={Style.text}>
-        <p>〒062-0031　北海道札幌市豊平区西岡1条3丁目10-5</p>
+        <p>住所 : 〒062-0031　北海道札幌市豊平区西岡1条3丁目10-5</p>
       </div>
       <Link href="/access" className={Style.button}>
           <span>アクセス詳細へ</span>

@@ -6,7 +6,7 @@
   align-items: center;
   gap: 40px;
   width: 100%;
-  padding: 80px 40px 20px;
+  padding: 80px 20px 40px;
 
   @include mq(sp) {
     padding: calcVw(40) calcVw(20) calcVw(20);
@@ -16,7 +16,6 @@
     font-size: 45px;
     font-weight: 400;
     text-align: center;
-    padding-bottom: 60px;
     padding: 12px 0;
     max-width: 600px;
     width: 100%;
@@ -26,147 +25,110 @@
 
     @include mq(sp) {
       font-size: calcVw(40);
-      padding-bottom: 0;
+      padding: calcVw(12) 0;
+      border-top: calcVw(3) double #c0c0c0;
+      border-bottom: calcVw(3) double #c0c0c0;
     }
   }
-
   .container {
+    max-width: 800px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
+    flex-direction: column;
 
     @include mq(sp) {
-      padding: calcVw(40) calcVw(20);
-      gap: calcVw(20);
+      max-width: none;
     }
 
-    .img_wrapper {
-      max-width: 600px;
-      width: 100%;
-      height: 400px;
-      position: relative;
-  
+    h1 {
+      font-size: 40px;
+      padding-bottom: 20px;
+      font-weight: 400;
+
       @include mq(sp) {
-        max-width: none;
-        height: calcVw(220);
-      }
-  
-      .img {
-        position: absolute;
+        font-size: calcVw(32);
+        padding-bottom: calcVw(10);
+        text-align: center;
       }
     }
-  
-    .slide {
-      @include mq(sp) {
-        animation-name: slide_right;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-      }
-    }
-  
-    .text {
-      max-width: 500px;
-      width: 100%;
+
+    .desc {
+      font-size: 16px;
       display: flex;
       flex-direction: column;
-  
+      gap: 8px;
+      padding-bottom: 15px;
+
       @include mq(sp) {
-        max-width: none;
+        font-size: calcVw(16);
+        gap: calcVw(8);
       }
-  
-      h1 {
-        font-size: 40px;
-        padding-bottom: 20px;
-        font-weight: 400;
-  
-        @include mq(sp) {
-          font-size: calcVw(32);
-          padding-bottom: calcVw(10);
-          text-align: center;
-        }
-      }
-  
-      .desc {
-        font-size: 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding-bottom: 15px;
-  
-        @include mq(sp) {
-          font-size: calcVw(16);
-          gap: calcVw(8);
-        }
-  
-        p {
-          &:first-child {
-            position: relative;
-            padding-left: 30px;
-  
-            @include mq(sp) {
-              padding-left: calcVw(30);
-            }
-  
-            &::before {
-              content: '';
-              position: absolute;
-              top: 50%;
-              left: 0;
-              transform: translateY(-50%);
-              width: 28px;
-              height: 16px;
-              background-color: #fa8072;
-              border: 1px solid #111;
-  
-              @include mq(sp) {
-                width: calcVw(28);
-                height: calcVw(16);
-                border: calcVw(1) solid #111;
-              }
-            }
-          }
-        }
 
-        .business_hours {
-          display: flex;
-          gap: 20px;
+      p {
+        &:first-child {
+          position: relative;
+          padding-left: 30px;
 
-          h4 {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.2;
-
-            @include mq(sp) {
-              font-size: calcVw(16);
-            }
-          }
-        }
-      }
-  
-      .button {
-        display: inline;
-        align-self: center;
-        text-align: center;
-        padding: 12px;
-        margin-top: 20px;
-        border: 2.5px solid red;
-  
-        @include mq(sp) {
-          padding: calcVw(12);
-          margin-top: calcVw(20);
-          border: calcVw(2.5) solid red;
-        }
-  
-        span {
-          font-size: 20px;
-          color: red;
-  
           @include mq(sp) {
-            font-size: calcVw(18);
+            padding-left: calcVw(30);
           }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 16px;
+            background-color: #fa8072;
+            border: 1px solid #111;
+
+            @include mq(sp) {
+              width: calcVw(28);
+              height: calcVw(16);
+              border: calcVw(1) solid #111;
+            }
+          }
+        }
+      }
+
+      .business_hours {
+        display: flex;
+        gap: 20px;
+
+        h4 {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.2;
+
+          @include mq(sp) {
+            font-size: calcVw(16);
+          }
+        }
+      }
+    }
+
+    .button {
+      display: inline;
+      align-self: center;
+      text-align: center;
+      padding: 12px;
+      margin-top: 20px;
+      border: 2.5px solid red;
+
+      @include mq(sp) {
+        padding: calcVw(12);
+        margin-top: calcVw(20);
+        border: calcVw(2.5) solid red;
+      }
+
+      span {
+        font-size: 20px;
+        color: red;
+
+        @include mq(sp) {
+          font-size: calcVw(18);
         }
       }
     }
