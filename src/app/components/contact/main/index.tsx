@@ -2,26 +2,6 @@
 
 import Style from './index.module.scss';
 import Image from 'next/image';
-import Link from 'next/link';
-import LineButton from '../../parts/line_button';
-
-// const snsItem = [
-//   {
-//     title: "Instagram",
-//     href: "/Instagram",
-//     icon: "/top/sns/instagram.svg"
-//   },
-//   {
-//     title: "Twitter",
-//     href: "/Twitter",
-//     icon: "/top/sns/twitter.svg"
-//   },
-//   {
-//     title: "Facebook",
-//     href: "/Facebook",
-//     icon: "/top/sns/facebook.svg"
-//   },
-// ];
 
 const Main = () => {
   return (
