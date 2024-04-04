@@ -1,42 +1,27 @@
-'use client';
-
 import React from 'react';
 import Style from './index.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import { pickupRanking } from '@/app/data/merchandises';
 
 
 
 const Menu: React.FC = () => {
-  // const [isFadeIn, setIsFadeIn] = useState<boolean>(false);
-  const [isSlide, setIsSlide] = useState<boolean>(false);
-
-  const toggleAnimation = () => {
-    // window.scrollY > 5 ? setIsFadeIn(true) : '';
-    window.scrollY > 120 ? setIsSlide(true) : '';
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", toggleAnimation);
-    return () => window.removeEventListener("scroll", toggleAnimation);
-  }, []);
-
   return (
     <div className={Style.menu}>
-      <div className={Style.text}>
-        <h2>メニュー</h2>
+      <h2>メニュー</h2>
+      <div className={Style.container}>
+        <div className={Style.text}>
           <div className={Style.pickup}>
             <h3>おすすめランキング</h3>
             <div className={Style.ranking}>
-              {pickupRanking.map((item, index) => {
+              {pickupRanking.map((merchandise, index) => {
                 return(
                   <div key={index} className={Style.merchandise}>
-                    <h4>{item.ranking}位</h4>
+                    <h4>{merchandise.ranking}位</h4>
                     <div>
-                      <p>{item.title}</p>
-                      <p className={Style.price}>{item.price}円</p>
+                    <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+                      <p className={Style.price}>{merchandise.price}円</p>
                     </div>
                   </div>
                 )
@@ -44,11 +29,12 @@ const Menu: React.FC = () => {
             </div>
           </div>
           <Link href="/menu" className={Style.button}>
-            <span>商品メニュー一覧へ</span>
+            <span>メニュー一覧へ</span>
           </Link>
-      </div>
-      <div className={isSlide ? `${Style.img_wrapper} ${Style.slide}` : `${Style.img_wrapper}`}>
-        <Image src='/top/menu/menu_image.jpg' alt='メニューイメージ' className={Style.img} layout='fill' objectFit='contain'/>
+        </div>
+        <div className={Style.img_wrapper}>
+          <Image src='/top/menu/menu_image.jpg' alt='メニューイメージ' className={Style.img} layout='fill' objectFit='contain'/>
+        </div>
       </div>
     </div>
   )

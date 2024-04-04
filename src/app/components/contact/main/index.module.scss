@@ -91,14 +91,14 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
-      padding: 8px;
-      border: 1px solid #111;
+      padding: 15px 40px;
+      border: 2px solid #111;
       max-width: 220px;
 
       @include mq(sp) {
         gap: calcVw(8);
-        padding: calcVw(8);
-        border: calcVw(1) solid #111;
+        padding: calcVw(12) calcVw(18);
+        border: calcVw(2) solid #111;
         max-width: calcVw(220);
       }
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Style from './index.module.scss'
 import { useState, useEffect } from 'react';
+import { mincho, notoSerif } from '@/app/styles/font';
 
 const HeaderPc = () => {
   const headerItem = [
@@ -32,37 +33,7 @@ const HeaderPc = () => {
       href: "/contact"
     }
   ];
-  // const headerItem = [
-  //   {
-  //     title: "HOME",
-  //     href: "/"
-  //   },
-  //   {
-  //     title: "NEWS",
-  //     href: "/news"
-  //   },
-  //   {
-  //     title: "MENU",
-  //     href: "/menu"
-  //   },
-  //   {
-  //     title: "SCHEDULE",
-  //     href: "/schedule"
-  //   },
-  //   {
-  //     title: "ACCESS",
-  //     href: "/access"
-  //   },
-  //   {
-  //     title: "CONTACT",
-  //     href: "/contact"
-  //   },
-  //   {
-  //     title: "ABOUT",
-  //     href: "/about"
-  //   }
-  // ];
-  
+
   const [isFixed, setIsFixed] = useState<boolean>(false);
 
   const toggleFixed = () => {
@@ -80,7 +51,7 @@ const HeaderPc = () => {
         <div className={Style.title}>
           <Link href="/" className={Style.title}>
             <Image src="/global/icon.svg" alt="アイコン" className={Style.icon} width={30} height={30} />
-            <h1 className={Style.company}>ブッチャー丸幸</h1>
+            <h1 className={mincho.className}>ブッチャー丸幸</h1>
           </Link>
         </div>
         <div className={Style.menu}>

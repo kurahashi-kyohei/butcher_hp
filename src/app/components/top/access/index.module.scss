@@ -1,6 +1,10 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .access {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   padding: 40px 0;
 
   @include mq(sp) {
@@ -8,8 +12,7 @@
   }
 
   h2 {
-    font-size: 40px;
-    margin-top: 40px;
+    font-size: 45px;
     font-weight: 400;
     text-align: center;
 
@@ -20,9 +23,31 @@
 
   .map {
     margin: 40px 0;
+    width: 100%;
 
     @include mq(sp) {
-      padding: calcVw(20) 0 ;
+      margin: calcVw(30) 0 ;
+    }
+  }
+
+  .button {
+    padding: 12px;
+    border: 2.5px solid red;
+    color: red;
+    max-width: 260px;
+    text-align: center;
+
+    @include mq(sp) {
+      padding: calcVw(12);
+      border: calcVw(2.5) solid red;
+    }
+
+    span {
+      font-size: 20px;
+
+      @include mq(sp) {
+        font-size: calcVw(18);
+      }
     }
   }
 }

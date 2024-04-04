@@ -7,23 +7,6 @@ import categories from '@/app/data/category';
 const Main: React.FC = () => {
   return (
     <div className={Style.main}>
-      <div className={Style.pickup}>
-        <h3>おすすめランキング</h3>
-        <div className={Style.ranking}>
-          {pickupRanking.map((item, index) => {
-            return(
-              <div key={index} className={Style.merchandise}>
-                <h4>{item.ranking}位</h4>
-                <div>
-                  <p>{item.title}</p>
-                  <p className={Style.price}>{item.price}円</p>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-      
       <div className={Style.category_wrapper}>
         <h3>カテゴリー別</h3>
         <div className={Style.categories}>
@@ -37,7 +20,24 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      <div className={Style.all}>
+      <div className={Style.pickup}>
+        <h3>おすすめランキング</h3>
+        <div className={Style.ranking}>
+          {pickupRanking.map((merchandise, index) => {
+            return(
+              <div key={index} className={Style.merchandise}>
+                <h4>{merchandise.ranking}位</h4>
+                <div>
+                  <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+                  <p className={Style.price}>{merchandise.price}円</p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* <div className={Style.all}>
         <h3>商品一覧</h3>
         <div className={Style.merchandises}>
           {merchandises.map((merchandise, index) => {
@@ -49,7 +49,7 @@ const Main: React.FC = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
       
       <div className={Style.note}>
           <p>※ 3000円以上ご購入の方 鶏皮味付き 1pサービス致します。</p>

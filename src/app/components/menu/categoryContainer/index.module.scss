@@ -1,5 +1,13 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
+.sp_only {
+  display: none;
+
+  @include mq(sp) {
+    display: block;
+  }
+}
+
 .categories {
   display: flex;
   flex-direction: column;
@@ -7,6 +15,11 @@
   justify-content: center;
   gap: 40px;
   padding: 80px;
+
+  @include mq(sp) {
+    gap: calcVw(40);
+    padding: calcVw(80) calcVw(20);
+  }
 
   h3 {
     max-width: 700px;
@@ -32,7 +45,7 @@
     flex-wrap: wrap;
     gap: 15px;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 600px;
     width: 100%;
 
     @include mq(sp) {
@@ -44,6 +57,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 8px;
+
+      @include mq(sp) {
+        gap: calcVw(8);
+      }
+
+      .title {
+        font-size: 18px;
+        
+        @include mq(sp) {
+          font-size: calcVw(16);
+        }
+      }
 
       p {
         font-size: 18px;
@@ -61,7 +87,7 @@
 
   .note {
     padding-top: 30px;
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -77,6 +103,27 @@
 
       @include mq(sp) {
         font-size: calcVw(16);
+      }
+    }
+  }
+
+  .button {
+    padding: 12px;
+    border: 2.5px solid red;
+    color: red;
+    max-width: 260px;
+    text-align: center;
+
+    @include mq(sp) {
+      padding: calcVw(12);
+      border: calcVw(2.5) solid red;
+    }
+
+    span {
+      font-size: 20px;
+
+      @include mq(sp) {
+        font-size: calcVw(18);
       }
     }
   }

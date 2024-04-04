@@ -1,4 +1,5 @@
 import Style from './index.module.scss';
+import Link from 'next/link';
 
 
 const Contact = () => {
@@ -12,6 +13,9 @@ const Contact = () => {
           <h4>FAX : 851-0815</h4>
         </div>
       </div>
+      <Link href="/contact" className={Style.button}>
+        <span>お問い合わせ詳細へ</span>
+      </Link>
     </div>
   )
 }

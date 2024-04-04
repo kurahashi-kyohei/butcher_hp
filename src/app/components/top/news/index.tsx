@@ -5,7 +5,7 @@ import Link from 'next/link';
 const News = () => {
   return (
     <div className={Style.news}>
-      <h2>ニュース</h2>
+      <h2>新着情報</h2>
       <div className={Style.container}>
         {news.map((news, index) => {
           return(
@@ -17,7 +17,7 @@ const News = () => {
         })}
       </div>
       <Link href="/news" className={Style.button}>
-         <span>ニュース一覧へ</span>
+         <span>新着情報一覧へ</span>
       </Link>
     </div>
   )

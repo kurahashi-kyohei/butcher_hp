@@ -32,16 +32,16 @@ const Calendar = () => {
   // 前月の日付を追加
   for (let i = 0; i < startDayOfWeek; i++) {
     const date = new Date(year, month - 1, prevMonthLastDay - i)
-    const isMonday = date.getDay() === 1;
-    dates.unshift(<td key={`prev-${i}`} className={isMonday ? `${Style.prevMonth} ${Style.monday}` : `${Style.prevMonth}`}>{prevMonthLastDay - i}</td>);
+    const isSunday = date.getDay() === 0;
+    dates.unshift(<td key={`prev-${i}`} className={isSunday ? `${Style.prevMonth} ${Style.sunday}` : `${Style.prevMonth}`}>{prevMonthLastDay - i}</td>);
   }
 
   // 当月の日付を追加
   for (let i = 1; i <= daysInMonth; i++) {
     const date = new Date(year, month, i);
-    const isMonday = date.getDay() === 1;
+    const isSunday = date.getDay() === 0;
     dates.push(
-      <td key={`current-${i}`} className={`${i === today ? Style.today : ''} ${isMonday ? Style.monday : ''}`}>{i}</td>
+      <td key={`current-${i}`} className={`${i === today ? Style.today : ''} ${isSunday ? Style.sunday : ''}`}>{i}</td>
     );
   }
 
@@ -52,8 +52,8 @@ const Calendar = () => {
   // 次月の日付を追加
   for (let i = 1; i <= nextMonthDaysToAdd; i++) {
     const date = new Date(year, month + 1, i)
-    const isMonday = date.getDay() === 1;
-    dates.push(<td key={`next-${i}`} className={isMonday ? `${Style.nextMonth} ${Style.monday}` : `${Style.nextMonth}`}>{i}</td>);
+    const isSunday = date.getDay() === 0;
+    dates.push(<td key={`next-${i}`} className={isSunday ? `${Style.nextMonth} ${Style.sunday}` : `${Style.nextMonth}`}>{i}</td>);
   }
 
   let weeks = [];

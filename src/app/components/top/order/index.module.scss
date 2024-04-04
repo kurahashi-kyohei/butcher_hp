@@ -1,0 +1,80 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+.sp_only {
+  display: none;
+
+  @include mq(sp) {
+    display: block;
+  }
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+
+  @include mq(sp) {
+    padding: calcVw(20) ;
+    margin-bottom: calcVw(40);
+  }
+
+  h2 {
+    font-size: 42px;
+    margin-top: 40px;
+    font-weight: 400;
+    text-align: center;
+
+    @include mq(sp) {
+      font-size: calcVw(36);
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    text-align: center;
+    color: red;
+    padding: 15px;
+    border: 2px solid red;
+
+    @include mq(sp) {
+      font-size: calcVw(20);
+      padding: calcVw(10);
+      border: calcVw(2) solid red;
+    }
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include mq(sp) {
+      gap: calcVw(15);
+    }
+
+    p {
+      font-size: 18px;
+      position: relative;
+      padding-left: 10px;
+
+      @include mq(sp) {
+        font-size: calcVw(18);
+        padding-left: calcVw(10);
+      }
+
+      &::before {
+        content: '・';
+        position: absolute;
+        left: -10px;
+
+        @include mq(sp) {
+          left: calcVw(-10);
+        }
+      }
+    }
+  }
+}

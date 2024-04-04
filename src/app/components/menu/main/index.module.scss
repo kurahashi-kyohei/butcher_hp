@@ -1,14 +1,22 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
+.sp_only {
+  display: none;
+
+  @include mq(sp) {
+    display: block;
+  }
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 60px;
   padding: 80px;
   @include mq(sp) {
-    gap: calcVw(20);
+    gap: calcVw(40);
     padding: calcVw(40) calcVw(20);
   }
 
@@ -30,7 +38,7 @@
   }
 
   .pickup {
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -43,6 +51,7 @@
       flex-wrap: wrap;
       gap: 10px;
       margin: 0 auto;
+      max-width: 550px;
       width: 100%;
 
       @include mq(sp) {
@@ -53,7 +62,7 @@
       .merchandise {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
 
         @include mq(sp) {
           gap: calcVw(8);
@@ -76,6 +85,14 @@
 
           @include mq(sp) {
             gap: calcVw(8);
+          }
+
+          .title {
+            font-size: 18px;
+            
+            @include mq(sp) {
+              font-size: calcVw(16);
+            }
           }
 
           p {
@@ -199,7 +216,7 @@
 
   .note {
     padding-top: 30px;
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     display: flex;
     flex-direction: column;

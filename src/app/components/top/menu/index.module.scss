@@ -1,180 +1,193 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .menu {
-  padding: 40px;
+  width: 100%;
+  padding: 40px 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  border-bottom: 2px solid #111;
+  flex-direction: column;
+  gap: 40px;
 
   @include mq(sp) {
-    padding: calcVw(40) calcVw(20);
-    gap: calcVw(50);
-    border: calcVw(2) solid #111;
+    padding: calcVw(20);
+    gap: calcVw(20);
     flex-direction: column;
+    gap: calcVw(40);
   }
 
-  .text {
-    max-width: 550px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  h2 {
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
 
     @include mq(sp) {
-      max-width: none;
-      padding-bottom: 0;
+      font-size: calcVw(40);
+      align-self: center;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    @include mq(sp) {
+      gap: calcVw(30);
+      flex-direction: column;
     }
 
-    h2 {
-      font-size: 40px;
-      font-weight: 400;
-      align-self: start;
-
-      @include mq(sp) {
-        font-size: calcVw(32);
-        align-self: center;
-      }
-    }
-
-    .pickup {
+    .text {
+      max-width: 550px;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 0 60px;
-
-      h3 {
-        width: 100%;
-        text-align: center;
-        border-bottom: 2px solid #000;
-        font-size: 26px;
-        padding-bottom: 20px;
-        margin: 0 auto 30px;
-    
-        @include mq(sp) {
-          border-bottom: calcVw(2) solid #000;
-          font-size: calcVw(24);
-          padding-bottom: calcVw(15);
-          margin: 0 auto calcVw(30);
-        }
+      gap: 50px;
+  
+      @include mq(sp) {
+        max-width: none;
+        padding-bottom: 0;
+        gap: calcVw(40);
       }
   
-      .ranking {
+      .pickup {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 0 auto;
-        width: 100%;
-  
+        align-items: center;
+        gap: 30px;
+        
         @include mq(sp) {
-          gap: calcVw(20) calcVw(12);
-          justify-content: center;
+          gap: calcVw(20);
         }
   
-        .merchandise {
+        h3 {
+          width: 100%;
+          text-align: center;
+          border-bottom: 2px solid #000;
+          font-size: 24px;
+          padding-bottom: 20px;
+      
+          @include mq(sp) {
+            border-bottom: calcVw(2) solid #000;
+            font-size: calcVw(22);
+            padding-bottom: calcVw(15);
+          }
+        }
+    
+        .ranking {
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          flex-wrap: wrap;
           gap: 10px;
-  
+          margin: 0 auto;
+          width: 100%;
+    
           @include mq(sp) {
+            gap: calcVw(20) calcVw(12);
+            justify-content: center;
             gap: calcVw(8);
           }
-  
-          h4 {
-            font-size: 20px;
-            font-weight: 600;
-            
-            @include mq(sp) {
-              font-size: calcVw(16);
-            }
-          }
-  
-          div {
+    
+          .merchandise {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 10px;
-  
+    
             @include mq(sp) {
               gap: calcVw(8);
             }
-  
-            p {
-              font-size: 18px;
+    
+            h4 {
+              font-size: 20px;
+              font-weight: 600;
               
               @include mq(sp) {
-                font-size: calcVw(16);
-              } 
+                font-size: calcVw(18);
+              }
             }
     
-            .price {
-              color: red;
+            div {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 8px;
+    
+              @include mq(sp) {
+                gap: calcVw(8);
+              }
+
+              .title {
+                font-size: 18px;
+                
+                @include mq(sp) {
+                  font-size: calcVw(16);
+                }
+              }
+    
+              p {
+                font-size: 18px;
+                
+                @include mq(sp) {
+                  font-size: calcVw(16);
+                } 
+              }
+      
+              .price {
+                color: red;
+              }
             }
           }
         }
       }
-    }
-
-    .button {
-      padding: 15px;
-      border: 2.5px solid red;
-      color: red;
-      max-width: 260px;
-      text-align: center;
-
-      @include mq(sp) {
-        padding: calcVw(15);
-        border: calcVw(2.5) solid red;
-      }
-
-      span {
-        font-size: 22px;
-
+  
+      .button {
+        padding: 12px;
+        border: 2.5px solid red;
+        color: red;
+        max-width: 260px;
+        text-align: center;
+  
         @include mq(sp) {
-          font-size: calcVw(18);
+          padding: calcVw(12);
+          border: calcVw(2.5) solid red;
+        }
+  
+        span {
+          font-size: 20px;
+  
+          @include mq(sp) {
+            font-size: calcVw(18);
+          }
+        }
+      }
+  
+      .fadein {
+        @include mq(sp) {
+          animation-name: fadein;
+          animation-duration: 3s;
+          animation-fill-mode: forwards;
         }
       }
     }
-
-    .fadein {
-      @include mq(sp) {
-        animation-name: fadein;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-      }
-    }
-  }
-
-  .img_wrapper {
-    max-width: 600px;
-    width: 100%;
-    height: 400px;
-    position: relative;
-    align-self: center;
-
-    @include mq(sp) {
-      opacity: 0;
-      max-width: none;
-      height: calcVw(250);
-    }
-    
-    .img {
-      position: absolute;
+  
+    .img_wrapper {
+      max-width: 600px;
       width: 100%;
-    }
-  }
-
-  .slide {
-    @include mq(sp) {
-      animation-name: slide_left;
-      animation-duration: 3s;
-      animation-fill-mode: forwards;
-      transform-origin: right bottom;
+      height: 400px;
+      position: relative;
+      align-self: center;
+  
+      @include mq(sp) {
+        height: calcVw(250);
+      }
+      
+      .img {
+        position: absolute;
+        width: 100%;
+      }
     }
   }
 }

@@ -1,7 +1,76 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .main {
-  .calendar_wrapper {
-    padding: 40px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(sp) {
+    max-width: none;
   }
+
+  .container {
+    max-width: 1000px;
+    width: 100%;
+
+    .desc {
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 15px;
+  
+      @include mq(sp) {
+        font-size: calcVw(16);
+        gap: calcVw(8);
+      }
+  
+      p {
+        &:first-child {
+          position: relative;
+          padding-left: 30px;
+  
+          @include mq(sp) {
+            padding-left: calcVw(30);
+          }
+  
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 16px;
+            background-color: #fa8072;
+            border: 1px solid #111;
+  
+            @include mq(sp) {
+              width: calcVw(28);
+              height: calcVw(16);
+              border: calcVw(1) solid #111;
+            }
+          }
+        }
+      }
+  
+      .business_hours {
+        display: flex;
+        gap: 20px;
+  
+        h4 {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.2;
+  
+          @include mq(sp) {
+            font-size: calcVw(16);
+          }
+        }
+      }
+    }
+  }
+
+  
 }

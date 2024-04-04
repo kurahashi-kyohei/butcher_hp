@@ -287,13 +287,13 @@ const merchandises: merchandisesType[] = [
     category: 'grilled',
   },
   {
-    title: '牛 ホルモン (生・特注ホルたれ・塩タレ)',
+    title: '牛 ホルモン <br className={Style.sp_only}/>(生・特注ホルたれ・塩タレ)',
     desc: '',
     price: 180,
     category: 'grilled',
   },
   {
-    title: 'ラム肉 (ジンギスカン・しやぶ・特注ジンたれ)',
+    title: 'ラム肉 <br className={Style.sp_only}/> (ジンギスカン・<br className={Style.sp_only}/>しやぶ・特注ジンたれ)',
     desc: '',
     price: 240,
     category: 'grilled',
@@ -335,7 +335,7 @@ const merchandises: merchandisesType[] = [
     category: 'grilled',
   },
   {
-    title: '豚 ホルモン (生・特注ホルたれ・塩タレ)',
+    title: '豚 ホルモン <br className={Style.sp_only}/>(生・特注ホルたれ・塩タレ)',
     desc: '',
     price: 180,
     category: 'grilled',
@@ -359,7 +359,7 @@ const merchandises: merchandisesType[] = [
     category: 'grilled',
   },
   {
-    title: '豚 サガリ (本格塩味付) (1p 300g)',
+    title: '豚 サガリ <br className={Style.sp_only}/>(本格塩味付) (1p 300g)',
     desc: '',
     price: 550,
     category: 'grilled',
@@ -388,7 +388,7 @@ const pickupRanking: pickupRankingType[] = [
     ranking: 2
   },
   {
-    title: '牛 ホルモン (生・特注ホルたれ・塩タレ)',
+    title: '牛 ホルモン <br className={Style.sp_only}/>(生・特注ホルたれ・塩タレ)',
     desc: '',
     price: 180,
     category: 'grilled',
@@ -402,7 +402,7 @@ const pickupRanking: pickupRankingType[] = [
     ranking: 4
   },
   {
-    title: 'ラム肉 (ジンギスカン・しやぶ・特注ジンたれ)',
+    title: 'ラム肉 <br className={Style.sp_only}/>(ジンギスカン・しやぶ・特注ジンたれ)',
     desc: '',
     price: 240,
     category: 'grilled',

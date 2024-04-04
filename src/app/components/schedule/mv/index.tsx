@@ -6,7 +6,7 @@ const Mv = () => {
   return (
     <div id='mv' className={Style.mv_container}>
       <div className={Style.mv}>
-        <h2 className={satisfy.className}>Access</h2>
+        <h2 className={satisfy.className}>Schedule</h2>
         <div className={Style.arrow}>
          <Image src='/global/under_arrow.svg' alt='arrow' layout='fill' objectFit='contain'/>
         </div>

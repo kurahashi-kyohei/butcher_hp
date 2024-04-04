@@ -5,7 +5,7 @@ import Style from './index.module.scss';
 const Main = () => {
   return (
     <div className={Style.news}>
-      <h2>ニュース一覧</h2>
+      <h2>新着情報一覧</h2>
       <div className={Style.container}>
         {news.map((news, index) => {
           return(
