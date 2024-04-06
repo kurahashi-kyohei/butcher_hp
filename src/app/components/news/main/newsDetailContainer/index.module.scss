@@ -22,9 +22,14 @@
       display: grid;
       width: 100%;
       max-width: 1200px;
+      gap: 10px;
+      border-bottom: 1px solid #c0c0c0;
+      padding: 0 30px 20px;
 
       @include mq(sp) {
         gap: calcVw(10);
+        border-bottom: calcVw(1) solid #c0c0c0;
+        padding:  0 calcVw(30) calcVw(20);
       }
 
       h2 {
@@ -52,6 +57,7 @@
 
     .desc {
       font-size: 18px;
+      line-height: 1.5;
 
       @include mq(sp) {
         font-size: calcVw(18);
