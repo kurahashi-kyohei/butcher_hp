@@ -44,13 +44,18 @@ const HeaderPc = () => {
           </Link>
         </div>
         <div className={Style.menu}>
-          {headerItem.map((item, index) => {
-            return (
-              <Link key={index} href={item.href} className={Style.item}>
-                <span>{item.title}</span>
-              </Link>
-            );
-          })}
+          <div className={Style.link}>
+            {headerItem.map((item, index) => {
+              return (
+                <Link key={index} href={item.href} className={Style.item}>
+                  <span>{item.title}</span>
+                </Link>
+              );
+            })}
+          </div>
+          <div className={Style.telephone_number}>
+            <a href='tel:851-6398'>☎︎ 851-6398</a>
+          </div>
         </div>
       </nav>
     </header>
