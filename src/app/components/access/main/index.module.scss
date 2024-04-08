@@ -32,9 +32,22 @@
 
     p {
       font-size: 18px;
+      position: relative;
+      padding-left: 10px;
 
       @include mq(sp){
         font-size: calcVw(16);
+        padding-left: calcVw(6);
+      }
+
+      &::before {
+        content: '・';
+        position: absolute;
+        left: -10px;
+
+        @include mq(sp) {
+          left: calcVw(-6);
+        }
       }
     }
   }

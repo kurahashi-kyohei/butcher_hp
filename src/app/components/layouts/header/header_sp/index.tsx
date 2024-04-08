@@ -44,14 +44,19 @@ const HeaderSp = () => {
     <>
       <header className={Style.header}>
         <nav>
-          <div className={Style.title}>
+          <div className={Style.text}>
             <Link href="/" className={Style.title}>
               <Image src="/global/icon.JPG" alt="アイコン" className={Style.icon} width={30} height={30} />
               <h1 className={mincho.className}>ブッチャー丸幸</h1>
             </Link>
           </div>
-          <div className={isOpen ? `${Style.button} ${Style.cross}` : `${Style.button}` } onClick={handleOpen}>
-            <span></span><span></span><span></span>
+          <div className={Style.link}>
+            <div className={Style.telephone_number}>
+              <a href='tel:011-851-6398'>☎︎</a>
+            </div>
+            <div className={isOpen ? `${Style.button} ${Style.cross}` : `${Style.button}` } onClick={handleOpen}>
+              <span></span><span></span><span></span>
+            </div>
           </div>
         </nav>
 

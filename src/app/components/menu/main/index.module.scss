@@ -37,6 +37,42 @@
     }
   }
 
+  .note {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 25px;
+    border: 1.5px solid #111;
+
+    @include mq(sp) {
+      padding: calcVw(20) calcVw(25);
+      border: calcVw(1) solid #111;
+      gap: calcVw(10);
+    }
+
+    p {
+      font-size: 16px;
+      position: relative;
+      padding-left: 10px;
+
+      @include mq(sp) {
+        font-size: calcVw(16);
+        padding-left: calcVw(10);
+      }
+
+      &::before {
+        content: '・';
+        position: absolute;
+        left: -10px;
+
+        
+        @include mq(sp) {
+          left: calcVw(-10);
+        }
+      }
+    }
+  }
+
   .pickup {
     max-width: 700px;
     width: 100%;
@@ -192,7 +228,7 @@
       justify-content: center;
 
       @include mq(sp) {
-        gap: calcVw(12);
+        gap: calcVw(30);
       }
 
       .category {
@@ -266,75 +302,26 @@
 
     
   }
-  // .all {
+
+  // .note {
+  //   padding-top: 30px;
   //   max-width: 700px;
   //   width: 100%;
   //   display: flex;
   //   flex-direction: column;
-  //   align-items: center;
+  //   gap: 6px;
 
-  //   .merchandises {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     flex-wrap: wrap;
-  //     gap: 15px;
-  //     margin: 0 auto;
-  //     max-width: 600px;
-  //     width: 100%;
+  //   @include mq(sp) {
+  //     padding-top: calcVw(30);
+  //     gap: calcVw(6);
+  //   }
+
+  //   p {
+  //     font-size: 16px;
 
   //     @include mq(sp) {
-  //       gap: calcVw(12);
-  //       justify-content: center;
-  //     }
-
-  //     .merchandise {
-  //       display: flex;
-  //       justify-content: space-between;
-  //       align-items: center;
-
-  //       .title {
-  //         font-size: 18px;
-          
-  //         @include mq(sp) {
-  //           font-size: calcVw(16);
-  //         }
-  //       }
-
-  //       p {
-  //         font-size: 18px;
-          
-  //         @include mq(sp) {
-  //           font-size: calcVw(16);
-  //         }
-  //       }
-
-  //       .price {
-  //         color: red;
-  //       }
+  //       font-size: calcVw(16);
   //     }
   //   }
   // }
-
-  .note {
-    padding-top: 30px;
-    max-width: 700px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    @include mq(sp) {
-      padding-top: calcVw(30);
-      gap: calcVw(6);
-    }
-
-    p {
-      font-size: 16px;
-
-      @include mq(sp) {
-        font-size: calcVw(16);
-      }
-    }
-  }
 }

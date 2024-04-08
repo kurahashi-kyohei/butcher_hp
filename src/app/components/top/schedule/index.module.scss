@@ -9,7 +9,7 @@
   padding: 80px 20px 40px;
 
   @include mq(sp) {
-    padding: calcVw(40) calcVw(20) calcVw(20);
+    padding: calcVw(40) calcVw(20);
   }
 
   h2 {
@@ -24,6 +24,7 @@
     border-bottom: 3px double #c0c0c0;
 
     @include mq(sp) {
+      width: 80%;
       font-size: calcVw(40);
       padding: calcVw(12) 0;
       border-top: calcVw(3) double #c0c0c0;

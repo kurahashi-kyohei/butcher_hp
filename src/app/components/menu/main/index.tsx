@@ -7,6 +7,12 @@ import categories from '@/app/data/category';
 const Main: React.FC = () => {
   return (
     <div className={Style.main}>
+      <div className={Style.note}>
+        <p>お肉の厚さ、切り方、味付けはご希望通りにいたします。</p>
+        <p>3,000円以上ご購入された方は鶏皮(味付)1pサービスいたします。</p>
+        <p>下記の価格は税込価格です。</p>
+      </div>
+
       <div className={Style.category_wrapper}>
         <h3>カテゴリー別</h3>
         <div className={Style.categories}>
@@ -59,25 +65,13 @@ const Main: React.FC = () => {
             );
           })}
         </div>
-        
-        {/* <div className={Style.merchandises}>
-          {merchandises.map((merchandise, index) => {
-            return(
-              <div key={index} className={Style.merchandise}>
-                <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
-                
-                <p className={Style.price}>{merchandise.price}円</p>
-              </div>
-            );
-          })}
-        </div> */}
       </div>
       
-      <div className={Style.note}>
+      {/* <div className={Style.note}>
           <p>※ 3000円以上ご購入の方 鶏皮味付き 1pサービス致します。</p>
           <p>※ 上記の価格は、税込価格です。</p>
           <p>※肉相場変動により価格がたまに変わります</p>
-        </div>
+      </div> */}
     </div>
   )
 }

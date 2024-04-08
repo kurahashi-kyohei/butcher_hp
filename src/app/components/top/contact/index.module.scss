@@ -34,6 +34,7 @@
     border-bottom: 3px double #c0c0c0;
 
     @include mq(sp) {
+      width: 80%;
       font-size: calcVw(36);
       padding: calcVw(12) 0;
       border-top: calcVw(3) double #c0c0c0;

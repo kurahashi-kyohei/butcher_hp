@@ -7,14 +7,14 @@ const News = () => {
     <div className={Style.news}>
       <h2>新着情報</h2>
       <div className={Style.container}>
-        {news.map((news, index) => {
-          return(
-            <Link key={index} href={`/news/${news.id}`} className={Style.item}>
-              <h4>{news.date?.year}年{news.date?.month}月{news.date?.day}日 ({news.date?.week})</h4>
-              <h3>{news.title}</h3>
-            </Link>
-          )
-        })}
+        {[...Array(3)].map((_, i) => (
+          news[i] ? 
+          <Link key={i} href={`/news/${news[i].id}`} className={Style.item}>
+            <h4>{news[i].date?.year}年{news[i].date?.month}月{news[i].date?.day}日 ({news[i].date?.week})</h4>
+            <h3>{news[i].title}</h3>
+          </Link>
+          : ''
+        ))}
       </div>
       <Link href="/news" className={Style.button}>
          <span>新着情報一覧へ</span>

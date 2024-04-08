@@ -3,7 +3,7 @@ import Mv from '../components/contact/mv';
 import Main from '../components/contact/main';
 
 export const metadata: Metadata = {
-  title: "Contact | ブッチャー丸幸",
+  title: "ブッチャー丸幸 | お問い合わせ",
   description: "北海道札幌市豊平区にある精肉店です。",
 };
 

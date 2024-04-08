@@ -4,6 +4,13 @@
   width: 100%;
   position: relative;
 
+  .sp_only {
+    display: none;
+  
+    @include mq(sp) {
+      display: block;
+    }
+  }
 
   .img_box{
     width: 100%;
@@ -15,6 +22,24 @@
       height: 100vw;
     }
 
+    h2 {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #fff;
+      // width: 80%;
+      text-wrap: nowrap;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 15;
+
+      @include mq(sp) {
+        font-size: calcVw(30);
+      }
+    }
+
     div{
       position: absolute;
       top: 0;
@@ -24,7 +49,7 @@
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      // background-attachment: fixed; 
+      background-attachment: fixed; 
       z-index: 10;
       opacity: 0;
       animation-name: fade;
@@ -35,11 +60,11 @@
         height: 100vw;
       }
 
-      &:first-child{
+      &:nth-child(2){
         background-image: url("/top/mv/bg_1.jpg");
       }
       
-      &:nth-child(2){
+      &:nth-child(3){
         background-image: url("/top/mv/bg_2.jpg");
         animation-delay: 5s;
       }

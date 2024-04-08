@@ -5,9 +5,9 @@ import Footer from "./components/layouts/footer";
 import { notojp } from "./styles/font";
 
 export const metadata: Metadata = {
-  title: "ブッチャー丸幸",
+  title: "ブッチャー丸幸 | Official Web Site",
   description: "北海道札幌市豊平区にある精肉店です。",
-  icons: '/global/icon.svg'
+  icons: '/global/icon.JPG'
 };
 
 export default function RootLayout({

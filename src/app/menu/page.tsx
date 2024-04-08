@@ -4,7 +4,7 @@ import Mv from '../components/menu/mv';
 import Main from '../components/menu/main';
 
 export const metadata: Metadata = {
-  title: "Menu | ブッチャー丸幸",
+  title: "ブッチャー丸幸 | メニュー",
   description: "北海道札幌市豊平区にある精肉店です。",
 };
 

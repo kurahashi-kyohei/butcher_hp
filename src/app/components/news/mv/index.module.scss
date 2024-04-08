@@ -4,11 +4,10 @@
   width: 100%;
 
   .mv{
-    position: relative;
+    // padding-top: 40px;
     width: 100%;
-    height: 46vw;
+    height: 600px;
     overflow: hidden;
-    position: relative;
     background-image: url('/contact/mv/bg.jpg');
     background-position: center center;
     background-size: cover;
@@ -21,7 +20,10 @@
     justify-content: center;
 
     @include mq(sp) {
-      height: 100vw;
+      background-size: contain;
+      background-position: top center;
+      padding-top: calcVw(0);
+      height: calcVw(400);
       gap: calcVw(20);
     }
   }

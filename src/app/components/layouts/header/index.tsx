@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <>
-      {ua > 767 ? (
+      {ua > 1024 ? (
         <HeaderPc />
       ) : (
         <HeaderSp />

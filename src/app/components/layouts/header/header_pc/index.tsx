@@ -54,7 +54,7 @@ const HeaderPc = () => {
             })}
           </div>
           <div className={Style.telephone_number}>
-            <a href='tel:851-6398'>☎︎ 851-6398</a>
+            <a href='tel:011-851-6398'>☎︎ (011)-851-6398</a>
           </div>
         </div>
       </nav>
