@@ -39,7 +39,7 @@ const HeaderPc = () => {
       <nav>
         <div className={Style.title}>
           <Link href="/" className={Style.title}>
-            <Image src="/global/icon.JPG" alt="アイコン" className={Style.icon} width={50} height={50} />
+            <Image src="/global/icon.svg" alt="アイコン" className={Style.icon} width={50} height={50} />
             <h1 className={mincho.className}>ブッチャー丸幸</h1>
           </Link>
         </div>

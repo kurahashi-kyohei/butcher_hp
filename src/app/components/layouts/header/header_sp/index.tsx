@@ -46,7 +46,7 @@ const HeaderSp = () => {
         <nav>
           <div className={Style.text}>
             <Link href="/" className={Style.title}>
-              <Image src="/global/icon.JPG" alt="アイコン" className={Style.icon} width={30} height={30} />
+              <Image src="/global/icon.svg" alt="アイコン" className={Style.icon} width={30} height={30} />
               <h1 className={mincho.className}>ブッチャー丸幸</h1>
             </Link>
           </div>
