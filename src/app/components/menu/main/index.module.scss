@@ -80,6 +80,19 @@
     flex-direction: column;
     align-items: center;
 
+    h3 {
+      position: relative;
+
+      &::before {
+        content: '従業員が選んだ❗️';
+        position: absolute;
+        top: -20px;
+        left: 25%;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
     .ranking {
       display: flex;
       flex-direction: column;

@@ -4,9 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px;
+  padding-top: 90px;
+
+  @include mq(tablet) {
+    padding-top: 70px;
+  }
 
   @include mq(sp) {
-    padding-top: calcVw(70);
+    padding-top: calcVw(65);
   }
 }

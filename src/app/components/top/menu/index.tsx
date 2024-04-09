@@ -33,7 +33,7 @@ const Menu: React.FC = () => {
           </Link>
         </div>
         <div className={Style.img_wrapper}>
-          <Image src='/top/menu/menu_image.jpg' alt='メニューイメージ' className={Style.img} layout='fill' objectFit='contain'/>
+          <Image src='/top/menu/menu_image.webp' alt='メニューイメージ' className={Style.img} layout='fill' objectFit='contain'/>
         </div>
       </div>
     </div>

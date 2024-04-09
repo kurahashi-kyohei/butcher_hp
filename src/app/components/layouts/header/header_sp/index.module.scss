@@ -62,16 +62,25 @@
       }
 
       .telephone_number {
+        width: 24px;
+        height: 24px;
         position: relative;
 
+        @include mq(sp) {
+          width: calcVw(24);
+          height: calcVw(24);
+        }
+
         a {
-          top: 0;
+          position: absolute;
+          top: 8px;
           color: red;
           font-weight: 500;
           font-size: 24px;
           line-height: 0;
     
           @include mq(sp) {
+            top: calcVw(6);
             font-size: calcVw(24);
           }
         }
@@ -81,19 +90,17 @@
         position: relative;
         cursor: pointer;
         width: 30px;
-        height: 30px;
-        padding-top: 6px;
+        height: 24px;
 
         @include mq(sp) {
           width: calcVw(30);
-          height: calcVw(30);
+          height: calcVw(24);
         }
   
         span {
           display: inline-block;
           transition: all .4s;
           position: absolute;
-          bottom: 0;
           left: 0;
           height: 3px;
           border-radius: 2px;
@@ -107,40 +114,36 @@
           }
   
           &:first-child {
-            bottom: 16px;
-
-            @include mq(sp) {
-              bottom: calcVw(16);
-            }
+            top: 0;
           }
   
           &:nth-child(2) {
-            bottom: 8px;
+            top: 8px;
 
             @include mq(sp) {
-              bottom: calcVw(8);
+              top: calcVw(8);
             }
           }
   
           &:last-child {
-            bottom: 0;
+            top: 16px;
+
+            @include mq(sp) {
+              top: calcVw(16);
+            }
           }
         }
       }
   
       .cross {
-        span {
-          &:first-child {
-            top: 18px;
-            left: 18px;
-            transform: translateY(6px) rotate(-45deg);
-            width: 40%;
+        position: relative;
 
-            @include mq(sp) {
-              top: calcVw(18);
-              left: calcVw(18);
-              transform: translateY(6) rotate(-45deg);
-            }
+        span {
+          position: absolute;
+
+          &:first-child {
+            top: 0 !important;
+            transform: translateY(250%) rotate(-45deg);
           }
   
           &:nth-child(2) {
@@ -148,16 +151,8 @@
           }
   
           &:last-child {
-            top: 30px;
-            left: 18px;
-            transform: translateY(-6px) rotate(45deg);
-            width: 40%;
-
-            @include mq(sp) {
-              top: calcVw(30);
-              left: calcVw(18);
-              transform: translateY(calcVw(-6) rotate(45deg));
-            }
+            bottom: 0 !important;
+            transform: translateY(-250%) rotate(45deg);
           }
         }  
       }

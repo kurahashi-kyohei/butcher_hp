@@ -62,6 +62,14 @@
       @include mq(sp) {
         font-size: calcVw(18);
       }
+
+      ul {
+        max-width: 300px;
+        li {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
     }
   }
 }

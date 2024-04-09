@@ -2,11 +2,10 @@
 
 .mv {
   width: 100%;
-  position: relative;
 
   .sp_only {
     display: none;
-  
+
     @include mq(sp) {
       display: block;
     }
@@ -14,12 +13,12 @@
 
   .img_box{
     width: 100%;
-    height: 46vw;
+    height: 600px;
     overflow: hidden;
     position: relative;
 
     @include mq(sp) {
-      height: 100vw;
+      height: calcVw(400);
     }
 
     h2 {
@@ -27,16 +26,22 @@
       font-weight: 500;
       line-height: 1.2;
       color: #fff;
-      // width: 80%;
       text-wrap: nowrap;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      bottom: 30px;
+      right: 30px;
       z-index: 15;
+      background-color:rgba(0,0,0,0.7);
+      padding: 10px;
+      border-radius: 5px;
 
       @include mq(sp) {
-        font-size: calcVw(30);
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+        font-size: calcVw(24);
+        padding: calcVw(10);
+        border-radius: calcVw(5);
       }
     }
 
@@ -45,7 +50,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 46vw;
+      height: 100%;
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -53,25 +58,21 @@
       z-index: 10;
       opacity: 0;
       animation-name: fade;
-      animation-duration: 15s;
+      animation-duration: 10s;
       animation-iteration-count: infinite;
 
       @include mq(sp) {
-        height: 100vw;
+        background-size: cover;
+        background-position: top;
       }
 
       &:nth-child(2){
-        background-image: url("/top/mv/bg_1.jpg");
+        background-image: url("/top/mv/bg_1.webp");
       }
       
       &:nth-child(3){
-        background-image: url("/top/mv/bg_2.jpg");
+        background-image: url("/top/mv/bg_2.webp");
         animation-delay: 5s;
-      }
-      
-      &:last-child{
-        background-image: url("/top/mv/bg_3.jpg");
-        animation-delay: 10s;
       }
     }
   }
