@@ -13,16 +13,19 @@ const Menu: React.FC = () => {
       <div className={Style.container}>
         <div className={Style.text}>
           <div className={Style.pickup}>
-            <h3>おすすめランキング</h3>
+            <h3>オススメ　ランキング</h3>
             <div className={Style.ranking}>
               {pickupRanking.map((merchandise, index) => {
                 return(
                   <div key={index} className={Style.merchandise}>
+                    <div className={Style.title}>
                     <h4>{merchandise.ranking}位</h4>
-                    <div>
-                    <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
-                      <p className={Style.price}>{merchandise.price}円</p>
-                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+                  </div>
+                  <div className={Style.price}>
+                    <p>{merchandise.amount}</p>
+                    <p>{merchandise.price}円</p>
+                  </div>
                   </div>
                 )
               })}

@@ -23,11 +23,10 @@
     border-top: 3px double #c0c0c0;
     border-bottom: 3px double #c0c0c0;
 
-
     @include mq(sp) {
-      width: 80%;
-      font-size: calcVw(34);
-      padding: calcVw(12) 0;
+      width: 50%;
+      font-size: calcVw(30);
+      padding: calcVw(8) 0;
       border-top: calcVw(3) double #c0c0c0;
       border-bottom: calcVw(3) double #c0c0c0;
     }
@@ -52,8 +51,10 @@
       border-bottom: 1px solid #c0c0c0;
 
       @include mq(sp) {
-        gap: calcVw(20);
-        padding: calcVw(20) 0 ;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calcVw(8);
+        padding: calcVw(15) 0 ;
         border-top: calcVw(1) solid #c0c0c0;
       }
 
@@ -63,7 +64,7 @@
         color: #555;
         
         @include mq(sp) {
-          font-size: calcVw(12);
+          font-size: calcVw(10);
         }
       }
 
@@ -72,7 +73,7 @@
         font-weight: 500;
         
         @include mq(sp) {
-          font-size: calcVw(16);
+          font-size: calcVw(14);
         }
       }
     }
@@ -86,15 +87,15 @@
 
 
     @include mq(sp) {
-      padding: calcVw(12);
-      border: calcVw(2.5) solid red;
+      padding: calcVw(8);
+      border: calcVw(2) solid red;
     }
 
     span {
       font-size: 20px;
 
       @include mq(sp) {
-        font-size: calcVw(18);
+        font-size: calcVw(16);
       }
     }
   }

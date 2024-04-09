@@ -10,7 +10,7 @@
 
   @include mq(sp) {
     padding: calcVw(20);
-    gap: calcVw(20);
+    gap: calcVw(10);
   }
 
   h2 {
@@ -25,9 +25,9 @@
     border-bottom: 3px double #c0c0c0;
 
     @include mq(sp) {
-      width: 80%;
-      font-size: calcVw(40);
-      padding: calcVw(12) 0;
+      width: 70%;
+      font-size: calcVw(32);
+      padding: calcVw(8) 0;
       border-top: calcVw(3) double #c0c0c0;
       border-bottom: calcVw(3) double #c0c0c0;
     }
@@ -42,18 +42,6 @@
       max-width: none;
     }
 
-    h1 {
-      font-size: 40px;
-      padding-bottom: 20px;
-      font-weight: 400;
-
-      @include mq(sp) {
-        font-size: calcVw(32);
-        padding-bottom: calcVw(10);
-        text-align: center;
-      }
-    }
-
     .desc {
       font-size: 16px;
       display: flex;
@@ -62,17 +50,17 @@
       padding-bottom: 15px;
 
       @include mq(sp) {
-        font-size: calcVw(16);
-        gap: calcVw(8);
+        font-size: calcVw(14);
+        gap: calcVw(6);
       }
 
       p {
         &:first-child {
           position: relative;
-          padding-left: 30px;
+          padding-left: 28px;
 
           @include mq(sp) {
-            padding-left: calcVw(30);
+            padding-left: calcVw(28);
           }
 
           &::before {
@@ -105,7 +93,7 @@
           line-height: 1.2;
 
           @include mq(sp) {
-            font-size: calcVw(16);
+            font-size: calcVw(14);
           }
         }
       }
@@ -120,9 +108,9 @@
       border: 2.5px solid red;
 
       @include mq(sp) {
-        padding: calcVw(12);
-        margin-top: calcVw(20);
-        border: calcVw(2.5) solid red;
+        padding: calcVw(8);
+        margin-top: calcVw(15);
+        border: calcVw(2) solid red;
       }
 
       span {
@@ -130,7 +118,7 @@
         color: red;
 
         @include mq(sp) {
-          font-size: calcVw(18);
+          font-size: calcVw(16);
         }
       }
     }

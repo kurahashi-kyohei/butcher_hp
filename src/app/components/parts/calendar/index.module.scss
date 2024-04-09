@@ -12,7 +12,7 @@
     text-align: center;
 
     @include mq(sp) {
-      font-size: calcVw(18);
+      font-size: calcVw(16);
     }
   }
 
@@ -42,7 +42,7 @@
       @include mq(sp) {
         border: calcVw(1) solid #ddd;
         padding: calcVw(2) calcVw(10);
-        font-size: calcVw(14);
+        font-size: calcVw(12);
       }
 
       &:first-child {
@@ -64,7 +64,7 @@
       @include mq(sp) {
         border: calcVw(1) solid #ddd;
         padding: calcVw(2) calcVw(10) calcVw(14);
-        font-size: calcVw(14);
+        font-size: calcVw(12);
       }
     }
   }
@@ -80,9 +80,6 @@
   opacity: 0.4 !important;
 }
 
-// .today {
-//   color: red;
-// }
 
 .sunday {
   position: relative;

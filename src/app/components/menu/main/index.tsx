@@ -32,10 +32,13 @@ const Main: React.FC = () => {
           {pickupRanking.map((merchandise, index) => {
             return(
               <div key={index} className={Style.merchandise}>
-                <h4>{merchandise.ranking}位</h4>
-                <div>
-                  <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
-                  <p className={Style.price}>{merchandise.price}円</p>
+                <div className={Style.title}>
+                  <h4>{merchandise.ranking}位</h4>
+                  <div dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+                </div>
+                <div className={Style.price}>
+                  <p>{merchandise.amount}</p>
+                  <p>{merchandise.price}円</p>
                 </div>
               </div>
             )

@@ -17,8 +17,8 @@
   padding: 80px;
 
   @include mq(sp) {
-    gap: calcVw(40);
-    padding: calcVw(80) calcVw(20);
+    gap: calcVw(30);
+    padding: calcVw(40) calcVw(20);
   }
 
   h3 {
@@ -28,13 +28,11 @@
     border-bottom: 2px solid #000;
     font-size: 26px;
     padding-bottom: 15px;
-    margin: 0 auto 30px;
 
     @include mq(sp) {
       border-bottom: calcVw(2) solid #000;
-      font-size: calcVw(26);
+      font-size: calcVw(24);
       padding-bottom: calcVw(15);
-      margin: 0 auto calcVw(30);
     }
   }
 
@@ -67,7 +65,7 @@
         font-size: 18px;
         
         @include mq(sp) {
-          font-size: calcVw(16);
+          font-size: calcVw(14);
         }
       }
 
@@ -75,7 +73,7 @@
         font-size: 18px;
         
         @include mq(sp) {
-          font-size: calcVw(16);
+          font-size: calcVw(14);
         }
       }
 
@@ -86,7 +84,6 @@
   }
 
   .note {
-    padding-top: 30px;
     max-width: 700px;
     width: 100%;
     display: flex;
@@ -94,15 +91,14 @@
     gap: 6px;
 
     @include mq(sp) {
-      padding-top: calcVw(30);
-      gap: calcVw(6);
+      gap: calcVw(4);
     }
 
     p {
       font-size: 16px;
 
       @include mq(sp) {
-        font-size: calcVw(16);
+        font-size: calcVw(12);
       }
     }
   }
@@ -115,15 +111,15 @@
     text-align: center;
 
     @include mq(sp) {
-      padding: calcVw(12);
-      border: calcVw(2.5) solid red;
+      padding: calcVw(8);
+      border: calcVw(2) solid red;
     }
 
     span {
       font-size: 20px;
 
       @include mq(sp) {
-        font-size: calcVw(18);
+        font-size: calcVw(16);
       }
     }
   }

@@ -27,7 +27,7 @@
     gap: 8px;
 
     @include mq(sp) {
-      gap: calcVw(8);
+      gap: calcVw(6);
     }
 
     p {
@@ -36,7 +36,7 @@
       padding-left: 10px;
 
       @include mq(sp){
-        font-size: calcVw(16);
+        font-size: calcVw(14);
         padding-left: calcVw(6);
       }
 

@@ -6,8 +6,8 @@ import { notojp } from "./styles/font";
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | Official Web Site",
-  description: "北海道札幌市豊平区にある精肉店です。",
-  icons: '/global/icon.JPG'
+  description: "札幌市豊平区にある精肉店です。創業から50年以上の歴史があります。お肉の注文につきましてはhpをご覧ください。",
+  icons: '/global/icon.svg'
 };
 
 export default function RootLayout({

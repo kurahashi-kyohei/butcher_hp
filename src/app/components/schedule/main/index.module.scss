@@ -8,6 +8,7 @@
 
   @include mq(sp) {
     max-width: none;
+    padding: calcVw(20);
   }
 
   .container {
@@ -19,10 +20,9 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      padding-bottom: 15px;
   
       @include mq(sp) {
-        font-size: calcVw(16);
+        font-size: calcVw(14);
         gap: calcVw(8);
       }
   
@@ -65,7 +65,7 @@
           line-height: 1.2;
   
           @include mq(sp) {
-            font-size: calcVw(16);
+            font-size: calcVw(14);
           }
         }
       }

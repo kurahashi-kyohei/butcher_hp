@@ -11,6 +11,7 @@ type pickupRankingType = {
   desc: string,
   price: number,
   category: string,
+  amount: string,
   // href: string,
   ranking: number
 }
@@ -374,38 +375,43 @@ const merchandises: merchandisesType[] = [
 
 const pickupRanking: pickupRankingType[] = [
   {
-    title: '彩美牛 モモ',
-    desc: '',
-    price: 480,
-    category: 'saibi',
-    ranking: 1
-  },
-  {
-    title: '牛 サガリ (上)',
+    title: '牛 サガリ (タレ有・無)',
     desc: '',
     price: 500,
     category: 'grilled',
+    amount: '100g',
+    ranking: 1
+  },
+  {
+    title: '国産カルビー (タレ有・無)',
+    desc: '',
+    price: 370,
+    category: 'grilled',
+    amount: '100g',
     ranking: 2
   },
   {
-    title: '牛 ホルモン <br className={Style.sp_only}/>(生・特注ホルたれ・塩タレ)',
+    title: '牛 ホルモン (特タレ・塩タレ・無)',
     desc: '',
     price: 180,
     category: 'grilled',
+    amount: '100g',
     ranking: 3
   },
   {
-    title: '豚 サガリ (本格塩味付) 300g',
-    desc: '',
-    price: 550,
-    category: 'grilled',
-    ranking: 4
-  },
-  {
-    title: 'ラム肉 <br className={Style.sp_only}/> (ジンギスカン・しやぶ・特注ジンたれ)',
+    title: 'ラム (ジンタレ有・無)',
     desc: '',
     price: 240,
     category: 'grilled',
+    amount: '100g',
+    ranking: 4
+  },
+  {
+    title: '豚サガリ (塩味付)',
+    desc: '',
+    price: 550,
+    category: 'grilled',
+    amount: '300g 1p',
     ranking: 5
   },
 ]

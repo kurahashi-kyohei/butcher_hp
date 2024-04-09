@@ -39,8 +39,10 @@
       border-bottom: 1px solid #c0c0c0;
 
       @include mq(sp) {
-        gap: calcVw(20);
-        padding: calcVw(20) 0 ;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calcVw(8);
+        padding: calcVw(15) 0 ;
         border-top: calcVw(1) solid #c0c0c0;
       }
 
@@ -50,7 +52,7 @@
         color: #555;
         
         @include mq(sp) {
-          font-size: calcVw(12);
+          font-size: calcVw(10);
         }
       }
 
@@ -59,7 +61,7 @@
         font-weight: 500;
         
         @include mq(sp) {
-          font-size: calcVw(16);
+          font-size: calcVw(14);
         }
       }
     }
