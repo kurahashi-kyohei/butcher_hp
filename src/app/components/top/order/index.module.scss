@@ -18,7 +18,7 @@
   // margin-bottom: 40px;
 
   @include mq(sp) {
-    padding: calcVw(20) calcVw(20) calcVw(40);
+    padding:  0 calcVw(20) calcVw(20);
     // margin-bottom: calcVw(40);
   }
 

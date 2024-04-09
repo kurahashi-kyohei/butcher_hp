@@ -17,7 +17,8 @@
   gap: 10px;
 
   @include mq(sp) {
-    padding: calcVw(40) 0 ;
+    padding: calcVw(20) 0 ;
+    gap: calcVw(10);
   }
 
   h2 {

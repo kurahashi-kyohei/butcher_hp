@@ -22,6 +22,7 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -35,6 +36,7 @@
 
     @include mq(sp) {
       gap: calcVw(10);
+      background-attachment: scroll;
       padding-top: calcVw(65);
     }
   }

@@ -9,10 +9,9 @@
   gap: 30px;
 
   @include mq(sp) {
-    padding: calcVw(40) calcVw(20);
-    gap: calcVw(20);
+    padding: calcVw(20);
+    gap: calcVw(30);
     flex-direction: column;
-    gap: calcVw(40);
   }
 
   h2 {

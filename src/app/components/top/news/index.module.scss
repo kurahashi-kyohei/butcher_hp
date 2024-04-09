@@ -9,8 +9,8 @@
   width: 100%;
 
   @include mq(sp) {
-    padding: calcVw(80) calcVw(20) calcVw(40);
-    gap: calcVw(50);
+    padding: calcVw(40) calcVw(20) calcVw(20);
+    gap: calcVw(30);
   }
 
   h2 {
