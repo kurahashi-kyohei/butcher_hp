@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Style from './index.module.scss'
 import { useState } from 'react';
 import { mincho } from '@/app/styles/font';
+import { useEffect } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 const HeaderSp = () => {
   const headerItem = [
@@ -39,6 +41,16 @@ const HeaderSp = () => {
   const handleOpen = () => {
     isOpen == false ? setIsOpen(true) : setIsOpen(false);
   };
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname, searchParams])
 
   return (
     <>
