@@ -1,6 +1,7 @@
 import { Metadata, NextPage } from "next";
 import Mv from "../components/schedule/mv";
 import Main from "../components/schedule/main";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | スケジュール",
@@ -9,10 +10,10 @@ export const metadata: Metadata = {
 
 const schedule: NextPage = () => {
   return (
-    <div>
+    <Suspense>
       <Mv />
       <Main />
-    </div>
+    </Suspense>
   )
 }
 

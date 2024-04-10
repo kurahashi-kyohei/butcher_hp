@@ -1,6 +1,7 @@
 import { NextPage, Metadata } from 'next';
 import Mv from '../components/contact/mv';
 import Main from '../components/contact/main';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | お問い合わせ",
@@ -9,10 +10,10 @@ export const metadata: Metadata = {
 
 const Contact: NextPage = () => {
   return (
-    <>
+    <Suspense>
       <Mv />
       <Main />
-    </>
+    </Suspense>
   )
 }
 

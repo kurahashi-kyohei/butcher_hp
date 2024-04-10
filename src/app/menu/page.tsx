@@ -1,4 +1,5 @@
 import type { NextPage, Metadata } from 'next';
+import { Suspense } from 'react';
 //components
 import Mv from '../components/menu/mv';
 import Main from '../components/menu/main';
@@ -10,10 +11,10 @@ export const metadata: Metadata = {
 
 const menu: NextPage = () => {
   return (
-    <div>
+    <Suspense>
         <Mv />
         <Main />
-    </div>
+    </Suspense>
   )
 }
 

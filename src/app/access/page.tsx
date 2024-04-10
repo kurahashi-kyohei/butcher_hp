@@ -1,6 +1,7 @@
 import { NextPage, Metadata } from "next";
 import Mv from "../components/access/mv";
 import Main from "../components/access/main";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | アクセス",
@@ -9,10 +10,10 @@ export const metadata: Metadata = {
 
 const Access: NextPage = () => {
   return (
-    <>
+    <Suspense>
       <Mv />
       <Main />
-    </>
+    </Suspense>
   )
 }
 

@@ -1,6 +1,7 @@
 import { NextPage, Metadata } from 'next';
 import Mv from '../components/news/mv';
 import Main from '../components/news/main';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | 新着情報",
