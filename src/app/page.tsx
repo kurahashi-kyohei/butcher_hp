@@ -10,28 +10,17 @@ import Contact from './components/top/contact';
 import Schedule from './components/top/schedule';
 import Access from './components/top/access';
 
-import { useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
- 
-function Search() {
-  const searchParams = useSearchParams()
- 
-  return <input placeholder="Search..." />
-}
-
 const Top: NextPage = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className={Style.top}>
-        <Mv />
-        <News />
-        <Menu />
-        <Order />
-        <Contact />
-        <Schedule />
-        <Access />
-      </div>
-    </Suspense>
+    <div className={Style.top}>
+      <Mv />
+      <News />
+      <Menu />
+      <Order />
+      <Contact />
+      <Schedule />
+      <Access />
+    </div>
   )
 }
 
