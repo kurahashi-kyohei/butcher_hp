@@ -3,6 +3,13 @@ import { Suspense } from 'react';
 //components
 import Mv from '../components/menu/mv';
 import Main from '../components/menu/main';
+import { useSearchParams } from 'next/navigation';
+
+function Search() {
+  const searchParams = useSearchParams();
+
+  return <input placeholder="Search..." />;
+}
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | メニュー",
@@ -11,7 +18,7 @@ export const metadata: Metadata = {
 
 const menu: NextPage = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
         <Mv />
         <Main />
     </Suspense>

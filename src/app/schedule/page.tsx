@@ -2,6 +2,14 @@ import { Metadata, NextPage } from "next";
 import Mv from "../components/schedule/mv";
 import Main from "../components/schedule/main";
 import { Suspense } from "react";
+import { useSearchParams } from 'next/navigation';
+
+
+function Search() {
+  const searchParams = useSearchParams();
+
+  return <input placeholder="Search..." />;
+}
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | スケジュール",
@@ -10,7 +18,7 @@ export const metadata: Metadata = {
 
 const schedule: NextPage = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <Mv />
       <Main />
     </Suspense>

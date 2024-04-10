@@ -19,18 +19,9 @@ function Search() {
   return <input placeholder="Search..." />
 }
 
-// export function Searchbar() {
-//   return (
-//     // You could have a loading skeleton as the `fallback` too
-//     <Suspense>
-//       <Search />
-//     </Suspense>
-//   )
-// }
-
 const Top: NextPage = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className={Style.top}>
         <Mv />
         <News />
