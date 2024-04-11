@@ -6,12 +6,6 @@ const notojp = Noto_Sans_JP({
   display: "swap",
 });
 
-const notoSerif = Noto_Serif ({
-  weight: ["400", "500"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const satisfy = Satisfy({
   subsets: ["latin"],
   display: "swap",
@@ -24,4 +18,4 @@ const mincho = Zen_Old_Mincho({
   weight: "400",
 });
 
-export { notojp, satisfy, notoSerif, mincho };
+export { notojp, satisfy, mincho };

@@ -3,7 +3,6 @@ type merchandisesType = {
   desc: string,
   price: number,
   category: string,
-  // href: string,
 }
 
 type pickupRankingType = {
@@ -12,7 +11,6 @@ type pickupRankingType = {
   price: number,
   category: string,
   amount: string,
-  // href: string,
   ranking: number
 }
 

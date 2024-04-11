@@ -207,14 +207,6 @@
           }
         }
       }
-  
-      .fadein {
-        @include mq(sp) {
-          animation-name: fadein;
-          animation-duration: 3s;
-          animation-fill-mode: forwards;
-        }
-      }
     }
   
     .img_wrapper {
