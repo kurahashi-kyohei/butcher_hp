@@ -45,12 +45,16 @@
       }
     }
 
-    img {
+    div{
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
       z-index: 10;
       opacity: 0;
       animation-name: fade;
@@ -61,8 +65,13 @@
         background-size: contain;
         background-position: top;
       }
+
+      &:first-child{
+        background-image: url("/top/mv/bg_1.webp");
+      }
       
       &:nth-child(2){
+        background-image: url("/top/mv/bg_2.webp");
         animation-delay: 5s;
       }
     }
