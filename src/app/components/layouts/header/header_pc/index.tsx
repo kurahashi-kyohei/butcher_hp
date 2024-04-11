@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Style from './index.module.scss'
-import { useState, useEffect } from 'react';
-import { mincho, notoSerif } from '@/app/styles/font';
+import { mincho } from '@/app/styles/font';
 
 const HeaderPc = () => {
   const headerItem = [
