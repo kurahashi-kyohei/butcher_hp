@@ -45,11 +45,16 @@ const Footer = () => {
             );
           })}
       </div>
-      <Scroll to="mv" smooth={true} offset={-30}>
+      <a href="#mv">
         <div className={Style.button}>
           TOP
         </div>
-      </Scroll>
+      </a>
+      {/* <Scroll to="mv" smooth={true} offset={-30}>
+        <div className={Style.button}>
+          TOP
+        </div>
+      </Scroll> */}
       <p>© 2024 ブッチャー丸幸</p>
     </footer>
   );
