@@ -35,8 +35,6 @@
     }
 
     @include mq(sp) {
-      // background-size: contain;
-      // background-position: top;
       background-attachment: scroll;
       gap: calcVw(10);
       padding-top: calcVw(65);

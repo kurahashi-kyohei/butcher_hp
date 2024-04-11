@@ -32,36 +32,6 @@ const Footer = () => {
       href: "/contact"
     }
   ];
-  // const footerItem = [
-  //   {
-  //     title: "HOME",
-  //     href: "/"
-  //   },
-  //   {
-  //     title: "NEWS",
-  //     href: "/news"
-  //   },
-  //   {
-  //     title: "MENU",
-  //     href: "/menu"
-  //   },
-  //   {
-  //     title: "SCHEDULE",
-  //     href: "/schedule"
-  //   },
-  //   {
-  //     title: "ACCESS",
-  //     href: "/access"
-  //   },
-  //   {
-  //     title: "CONTACT",
-  //     href: "/contact"
-  //   },
-  //   {
-  //     title: "ABOUT",
-  //     href: "/about"
-  //   }
-  // ];
 
   return (
     <footer className={Style.footer}>
