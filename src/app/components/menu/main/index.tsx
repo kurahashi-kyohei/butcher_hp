@@ -7,6 +7,9 @@ import categories from '@/app/data/category';
 const Main: React.FC = () => {
   return (
     <div className={Style.main}>
+      <div className={Style.download}>
+        <a href="https://drive.google.com/file/d/15JN4TVe1g9OSSv2yjTjjo13Sss7US8RI/view?usp=sharing">メニューのダウンロードはこちらから</a>
+      </div>
       <div className={Style.note}>
         <p>お肉の厚さ、切り方、味付けはご希望通りにいたします。</p>
         <p>3,000円以上ご購入された方は鶏皮(味付)1pサービスいたします。</p>
