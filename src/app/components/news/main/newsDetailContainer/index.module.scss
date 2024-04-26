@@ -55,21 +55,48 @@
       }
     }
 
-    .desc {
-      font-size: 18px;
-      line-height: 1.5;
-      max-width: 1200px;
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
 
       @include mq(sp) {
-        line-height: 1.4;
-        font-size: calcVw(16);
+        gap: calcVw(30);
       }
 
-      ul {
-        max-width: 300px;
-        li {
-          display: flex;
-          justify-content: space-between;
+      .desc {
+        font-size: 18px;
+        line-height: 1.5;
+  
+        @include mq(sp) {
+          line-height: 1.4;
+          font-size: calcVw(16);
+        }
+  
+        ul {
+          max-width: 300px;
+
+          @include mq(sp) {
+            max-width: none;
+          }
+
+          li {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+  
+      .writer {
+        width: 100%;
+
+        p {
+          text-align: right;
+          font-size: 18px;
+
+          @include mq(sp) {
+            font-size: calcVw(16);
+          }
         }
       }
 
@@ -78,5 +105,6 @@
         text-decoration: underline;
       }
     }
+    
   }
 }

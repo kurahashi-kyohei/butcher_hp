@@ -13,7 +13,13 @@ const NewsDetailContainer: React.FC<{ path: string }> = ({ path }) => {
               <h2>{news.title}</h2>
               <h3>{news.date?.year}年{news.date?.month}月{news.date?.day}日 ({news.date?.week})</h3>
             </div>
-            <div className={Style.desc} dangerouslySetInnerHTML={{ __html: news.desc }}></div>
+            <div className={Style.text}>
+              <div className={Style.desc} dangerouslySetInnerHTML={{ __html: news.desc }}></div>
+              <div className={Style.writer}>
+                <p>{news.writer}</p>
+              </div>
+            </div>
+            
           </div>
           : ''
         )
