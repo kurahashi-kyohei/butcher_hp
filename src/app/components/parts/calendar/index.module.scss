@@ -2,9 +2,13 @@
 
 .calendar {
   margin: 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   @include mq(sp){
     margin: calcVw(20) 0 0;
+    gap: calcVw(20);
   }
 
   p {
