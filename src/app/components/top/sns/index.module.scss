@@ -1,0 +1,87 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+
+.sns {
+  padding: 80px 40px;
+  background-image: url('/top/sns/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  @include mq(sp) {
+    padding: calcVw(40) calcVw(20);
+  }
+
+  h2 {
+    font-size: 40px;
+    padding-bottom: 40px;
+    font-weight: bold;
+
+    @include mq(sp) {
+      font-size: calcVw(40);
+      padding-bottom: calcVw(30);
+    }
+  }
+
+  p {
+    font-size: 18px;
+
+    @include mq(sp) {
+      font-size: calcVw(18);
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(sp) {
+      flex-direction: column;
+    }
+
+    .item {
+      padding: 40px;
+      // margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      @include mq(sp) {
+        padding: calcVw(20);
+        gap: calcVw(15);
+      }
+  
+      .img_wrapper {
+        width: 80px;
+        height: 80px;
+        position: relative;
+
+        @include mq(sp) {
+          width: calcVw(80);
+          height: calcVw(80);
+        }
+  
+        .icon {
+          position: absolute;
+          width: 100%;
+        }
+      }
+  
+      h3 {
+        font-size: 30px;
+
+        @include mq(sp) {
+          font-size: calcVw(30);
+        }
+      }
+    }
+  }
+}
