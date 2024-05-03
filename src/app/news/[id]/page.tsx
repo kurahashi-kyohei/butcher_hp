@@ -11,7 +11,7 @@ const NewsDetail: NextPage = () => {
   return (
     <>
       <Mv />
-      <NewsDetailContainer path={path || ''} />
+      <NewsDetailContainer />
     </>
   )
 }
