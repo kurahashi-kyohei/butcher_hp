@@ -55,57 +55,33 @@
       }
     }
 
-    .text {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+    .desc {
       max-width: 1200px;
+      font-size: 18px;
+      line-height: 1.5;
 
       @include mq(sp) {
-        gap: calcVw(30);
+        line-height: 1.4;
+        font-size: calcVw(16);
       }
 
-      .desc {
-        font-size: 18px;
-        line-height: 1.5;
-  
+      ul {
+        max-width: 300px;
+
         @include mq(sp) {
-          line-height: 1.4;
-          font-size: calcVw(16);
+          max-width: none;
         }
-  
-        ul {
-          max-width: 300px;
 
-          @include mq(sp) {
-            max-width: none;
-          }
-
-          li {
-            display: flex;
-            justify-content: space-between;
-          }
+        li {
+          display: flex;
+          justify-content: space-between;
         }
-      }
-  
-      .writer {
-        width: 100%;
-
-        p {
-          text-align: right;
-          font-size: 18px;
-
-          @include mq(sp) {
-            font-size: calcVw(16);
-          }
-        }
-      }
-
-      a {
-        color: red;
-        text-decoration: underline;
       }
     }
-    
+
+    a {
+      color: red;
+      text-decoration: underline;
+    }
   }
 }
