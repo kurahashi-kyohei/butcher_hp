@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "北海道札幌市豊平区にある精肉店です。",
 };
 
-const Contact: NextPage = () => {
+const News: NextPage = () => {
   return (
     <>
       <Mv />
@@ -16,4 +16,4 @@ const Contact: NextPage = () => {
   )
 }
 
-export default Contact;
+export default News;

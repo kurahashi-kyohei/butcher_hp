@@ -5,13 +5,17 @@ import { usePathname } from 'next/navigation';
 import Mv from '@/app/components/news/mv';
 import NewsDetailContainer from '@/app/components/news/main/newsDetailContainer';
 
-const NewsDetail: NextPage = () => {
-  const path = usePathname();
+interface NewsDetailPageProps {
+  params: {
+    id: string;
+  };
+}
 
+const NewsDetail: NextPage<NewsDetailPageProps> = ({ params }) => {
   return (
     <>
       <Mv />
-      <NewsDetailContainer path={path || ''} />
+      <NewsDetailContainer path={params} />
     </>
   )
 }
