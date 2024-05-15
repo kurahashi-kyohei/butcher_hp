@@ -16,7 +16,7 @@ const News = () => {
 
   return (
     <div className={Style.news}>
-      <h2>新着情報一覧</h2>
+      <h2>新着情報</h2>
       <div className={Style.container}>
         {[...Array(3)].map((_, i) => (
           newsList[i] ?
