@@ -16,13 +16,13 @@ const Main = () => {
             <h4>月〜金曜日 : 9時〜4時30分<br />　　土曜日 : 8時〜12時</h4>
           </div>
         </div>
-        <div className={Style.link}>
+        {/* <div className={Style.link}>
           <Link href={"/news/2"}>
             <p>
               GW中の詳しい営業時間はこちらから
             </p>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   )
