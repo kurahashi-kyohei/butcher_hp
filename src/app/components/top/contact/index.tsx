@@ -7,14 +7,13 @@ const Contact = () => {
     <div className={Style.contact}>
       <h2>お問い合わせ</h2>
       <div className={Style.text}>
-      <p>ご購入の際、何かご不明点がございましたら、こちらの電話番号・メールアドレス・FAX、またはお問い合わせフォームまでお問い合わせください。<br />営業時間外・定休日・祝日は対応しかねます。</p>
+      <p>ご購入の際、何かご不明点がございましたら、こちらの電話番号・FAX、またはお問い合わせフォームまでお問い合わせください。<br />営業時間外・定休日・祝日は対応しかねます。</p>
 
       <div className={Style.link}>
           <div className={Style.telephone_number}>
             <p>電話番号 : </p>
             <a href='tel:011-851-6398'>(011)-851-6398</a>
           </div>
-          <p>メールアドレス : buchermarukou@outlook.jp</p>
           <p>FAX : 851-0815</p>
           <a href='https://docs.google.com/forms/d/1mHz5p091_2qVSYbMUUZwqd9pyfw4fUMVdQgLKhwf9E8/edit?pli=1'>お問い合わせフォーム</a>
         </div>

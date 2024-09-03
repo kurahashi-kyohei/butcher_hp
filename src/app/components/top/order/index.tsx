@@ -5,7 +5,7 @@ const Order = () => {
     <div className={Style.order}>
       <h2>ご注文につきまして</h2>
       <div className={Style.desc}>
-        <p>電話、メールアドレス、FAXでの注文受付、<br className={Style.sp_only}/>その後店頭での受け取りとなります。</p>
+        <p>電話、FAXでの注文受付、<br className={Style.sp_only}/>その後店頭での受け取りとなります。</p>
         <p>お支払い方法は現金のみとさせていただきます。</p>
         <p>3日前〜前日までにご注文していただけると、受け取りがスムーズになります。</p>
         <p>当日対応は30分前までとさせていただいております。</p>
