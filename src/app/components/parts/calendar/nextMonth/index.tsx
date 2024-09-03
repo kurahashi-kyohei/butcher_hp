@@ -32,7 +32,7 @@ const NextMonth = () => {
     const date = new Date(year, month, i);
     const isSunday = date.getDay() === 0;
     //定休日を追加
-    const closeDay = [14];
+    const closeDay = [16, 23];
     const isCloseDay = closeDay.includes(i);
 
     dates.push(
