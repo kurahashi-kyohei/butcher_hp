@@ -17,9 +17,9 @@ const Top: NextPage = () => {
       <News />
       <Menu />
       <Order />
-      <Contact />
       <Schedule />
       <Access />
+      <Contact />
     </div>
   )
 }

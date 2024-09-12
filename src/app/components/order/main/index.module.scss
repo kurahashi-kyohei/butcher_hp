@@ -22,23 +22,12 @@
   }
 
   h2 {
-    font-size: 42px;
-    margin-top: 40px;
-    font-weight: 400;
+    font-size: 26px;
+    font-weight: bold;
     text-align: center;
-    padding: 12px 0;
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-    border-top: 3px double #c0c0c0;
-    border-bottom: 3px double #c0c0c0;
 
     @include mq(sp) {
-      width: 85%;
-      font-size: calcVw(30);
-      padding: calcVw(8) 0;
-      border-top: calcVw(3) double #c0c0c0;
-      border-bottom: calcVw(3) double #c0c0c0;
+      font-size: calcVw(24);
     }
   }
 
@@ -99,6 +88,54 @@
         @include mq(sp) {
           left: calcVw(-8);
         }
+      }
+    }
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 40px;
+    border: 2px solid red;
+    color: red;
+
+    @include mq(sp) {
+      gap: calcVw(6);
+      padding: calcVw(8) calcVw(12);
+      border: calcVw(2) solid #111;
+    }
+
+    a {
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: underline;
+
+      @include mq(sp) {
+        font-size: calcVw(16);
+      }
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 500;
+
+      @include mq(sp) {
+        font-size: calcVw(16);
+      }
+    }
+
+    .telephone_number {
+      display: flex;
+      gap: 7px;
+
+      @include mq(sp) {
+        gap: calcVw(7);
       }
     }
   }
