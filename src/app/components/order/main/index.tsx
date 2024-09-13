@@ -5,10 +5,20 @@ import Link from 'next/link';
 const Main = () => {
   return (
     <div className={Style.order}>
+      <h2>ご注文はこちらから</h2>
+      <div className={Style.link}>
+        <div className={Style.telephone_number}>
+          <p>電話番号 : </p>
+          <a href='tel:011-851-6398'>(011)-851-6398</a>
+        </div>
+        <a href='https://docs.google.com/forms/d/e/1FAIpQLSclJ9UPwCFGLKTX1RCSQ0s0Wv-ek9kUh4YIWC0ev93WlQXmWQ/viewform'>ご注文フォーム</a>
+      </div>
+
       <h2>ご注文について</h2>
+      
 
       <div className={Style.desc}>
-        <p>お電話、FAX、ご注文フォームでの注文受付、<br className={Style.sp_only}/>その後店頭での受け取りとなります。</p>
+        <p>お電話、FAX、ご注文フォームからの注文受付、<br className={Style.sp_only}/>その後店頭での受け取りとなります。</p>
         <p>お支払い方法は現金のみとさせていただきます。</p>
         <p>3日前〜前日までにご注文していただけると、受け取りがスムーズになります。</p>
         <p>電話での当日対応は30分前までとさせていただいております。</p>
@@ -18,13 +28,7 @@ const Main = () => {
       </div>
       <h3>お客様の笑顔のため、誠心誠意、真心を込めてお作りいたします。</h3>
 
-      <div className={Style.link}>
-        <div className={Style.telephone_number}>
-          <p>電話番号 : </p>
-          <a href='tel:011-851-6398'>(011)-851-6398</a>
-        </div>
-        <a href='https://docs.google.com/forms/d/e/1FAIpQLSclJ9UPwCFGLKTX1RCSQ0s0Wv-ek9kUh4YIWC0ev93WlQXmWQ/viewform'>ご注文フォーム</a>
-      </div>
+      
     </div>
   )
 }
