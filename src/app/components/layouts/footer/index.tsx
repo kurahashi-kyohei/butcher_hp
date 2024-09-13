@@ -20,6 +20,10 @@ const Footer = () => {
       href: "/menu"
     },
     {
+      title: "ご注文・ご予約",
+      href: "/order"
+    },
+    {
       title: "スケジュール",
       href: "/schedule"
     },

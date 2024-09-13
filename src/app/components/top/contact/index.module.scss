@@ -84,7 +84,7 @@
         text-decoration: underline;
 
         @include mq(sp) {
-          font-size: calcVw(18);
+          font-size: calcVw(16);
         }
       }
 
@@ -97,7 +97,7 @@
         font-weight: 500;
 
         @include mq(sp) {
-          font-size: calcVw(18);
+          font-size: calcVw(16);
         }
       }
 

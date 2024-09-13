@@ -14,31 +14,20 @@
   align-items: center;
   gap: 40px;
   width: 100%;
-  padding: 40px 20px;
+  padding: 60px 20px;
 
   @include mq(sp) {
-    padding:  0 calcVw(20) calcVw(20);
+    padding:  calcVw(60) calcVw(20) calcVw(20);
     gap: calcVw(30);
   }
 
   h2 {
-    font-size: 36px;
-    margin-top: 40px;
-    font-weight: 400;
+    font-size: 26px;
+    font-weight: bold;
     text-align: center;
-    padding: 12px 0;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    border-top: 3px double #c0c0c0;
-    border-bottom: 3px double #c0c0c0;
 
     @include mq(sp) {
-      width: 85%;
-      font-size: calcVw(26);
-      padding: calcVw(8) 0;
-      border-top: calcVw(3) double #c0c0c0;
-      border-bottom: calcVw(3) double #c0c0c0;
+      font-size: calcVw(24);
     }
   }
 
@@ -52,6 +41,56 @@
       font-size: calcVw(20);
       padding: calcVw(10);
       border: calcVw(2) solid #111;
+    }
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 40px;
+    border: 3px solid red;
+    color: red;
+    margin-bottom: 60px;
+
+    @include mq(sp) {
+      gap: calcVw(6);
+      padding: calcVw(12);
+      border: calcVw(3) solid red;
+      margin-bottom: calcVw(40);
+    }
+
+    a {
+      font-size: 22px;
+      font-weight: 600;
+      text-decoration: underline;
+
+      @include mq(sp) {
+        font-size: calcVw(18);
+      }
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+
+      @include mq(sp) {
+        font-size: calcVw(18);
+      }
+    }
+
+    .telephone_number {
+      display: flex;
+      gap: 7px;
+
+      @include mq(sp) {
+        gap: calcVw(7);
+      }
     }
   }
 
