@@ -5,6 +5,7 @@ import Style from '@/app/styles/scss/module/top.module.scss';
 import Mv from './components/top/mv';
 import News from './components/top/news';
 import Menu from './components/top/menu';
+import Link from './components/top/link';
 import Order from './components/top/order';
 import Contact from './components/top/contact';
 import Schedule from './components/top/schedule';
@@ -16,10 +17,11 @@ const Top: NextPage = () => {
       <Mv />
       <News />
       <Menu />
+      <Link />
       <Order />
-      <Contact />
       <Schedule />
       <Access />
+      <Contact />
     </div>
   )
 }

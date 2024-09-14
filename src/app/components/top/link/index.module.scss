@@ -42,63 +42,50 @@
     }
   }
 
-  h3 {
-    font-size: 22px;
-    text-align: center;
-    padding: 15px;
-    border: 2px solid #111;
-
-    @include mq(sp) {
-      font-size: calcVw(20);
-      padding: calcVw(10);
-      border: calcVw(2) solid #111;
-    }
-  }
-
-  .desc {
+  .link {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    position: relative;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 40px;
+    border: 3px solid red;
+    color: red;
 
     @include mq(sp) {
-      gap: calcVw(10);
+      gap: calcVw(6);
+      padding: calcVw(12);
+      border: calcVw(3) solid red;
     }
 
-    &::before {
-      content: '[New]';
-      position: absolute;
-      top: -20px;
-      left: 130px;
-      font-weight: 500;
-      color: red;
-      font-size: 14px;
+    a {
+      font-size: 22px;
+      font-weight: 600;
+      text-decoration: underline;
 
       @include mq(sp) {
-        top: calcVw(-15);
-        left: calcVw(115);
-        font-size: calcVw(12);
+        font-size: calcVw(18);
       }
+    }
+
+    a:hover {
+      color: red;
     }
 
     p {
-      font-size: 18px;
-      position: relative;
-      padding-left: 10px;
+      font-size: 22px;
+      font-weight: 600;
 
       @include mq(sp) {
-        font-size: calcVw(16);
-        padding-left: calcVw(8);
+        font-size: calcVw(18);
       }
+    }
 
-      &::before {
-        content: '・';
-        position: absolute;
-        left: -10px;
+    .telephone_number {
+      display: flex;
+      gap: 7px;
 
-        @include mq(sp) {
-          left: calcVw(-8);
-        }
+      @include mq(sp) {
+        gap: calcVw(7);
       }
     }
   }
