@@ -92,6 +92,7 @@
     @include mq(sp) {
       padding: calcVw(8);
       border: calcVw(2) solid red;
+      margin-top: calcVw(20);
     }
 
     span {

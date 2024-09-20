@@ -51,4 +51,38 @@
       }
     }
   }
+
+  .img_wrapper {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    align-self: center;
+    margin-bottom: -160px;
+    position: relative;
+
+    @include mq(sp) {
+      height: calcVw(600);
+      margin-bottom: calcVw(-140);
+    }
+
+    &::before {
+      content: '駐車場はこちら↓↓';
+      color: red;
+      font-size: 18px;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include mq(sp) {
+        font-size: calcVw(16);
+        top: calcVw(70);
+      }
+    }
+    
+    .img {
+      position: absolute;
+      width: 100%;
+    }
+  }
 }

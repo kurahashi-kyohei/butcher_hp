@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Style from './index.module.scss';
 import { GoogleMapsEmbed } from '@next/third-parties/google';
+import Image from 'next/image';
 
 const Access: React.FC = () => {
   return (
@@ -18,9 +19,10 @@ const Access: React.FC = () => {
       <div className={Style.text}>
         <p>〒062-0031　<br />北海道札幌市豊平区西岡1条3丁目10-5</p>
       </div>
+
       <Link href="/access" className={Style.button}>
-          <span>アクセス詳細へ</span>
-        </Link>
+        <span>アクセス詳細へ</span>
+      </Link>
     </div>
   )
 }
