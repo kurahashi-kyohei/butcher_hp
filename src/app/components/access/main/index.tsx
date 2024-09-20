@@ -1,5 +1,6 @@
 import Style from './index.module.scss';
 import { GoogleMapsEmbed } from '@next/third-parties/google';
+import Image from 'next/image';
 
 const Main = () => {
   return (
@@ -18,6 +19,10 @@ const Main = () => {
         <p>中央バス 「西岡1条3丁目」 バス停より徒歩5分</p>
         <p>地下鉄南北線 「南平岸」 駅より徒歩20分</p>
         <p>駐車場 5台</p>
+      </div>
+
+      <div className={Style.img_wrapper}>
+        <Image src='/access/main/parking.webp' alt='駐車場イメージ' className={Style.img} layout='fill' objectFit='contain'/>
       </div>
     </div>
   )
