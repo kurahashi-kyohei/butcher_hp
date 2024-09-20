@@ -20,10 +20,6 @@ const Access: React.FC = () => {
         <p>〒062-0031　<br />北海道札幌市豊平区西岡1条3丁目10-5</p>
       </div>
 
-      <div className={Style.img_wrapper}>
-        <Image src='/access/main/parking.webp' alt='駐車場イメージ' className={Style.img} layout='fill' objectFit='contain'/>
-      </div>
-
       <Link href="/access" className={Style.button}>
         <span>アクセス詳細へ</span>
       </Link>

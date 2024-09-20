@@ -57,11 +57,27 @@
     height: 800px;
     position: relative;
     align-self: center;
-    margin: -20px 0 -160px;
+    margin-bottom: -160px;
+    position: relative;
 
     @include mq(sp) {
       height: calcVw(600);
-      margin: calcVw(-40) 0 calcVw(-140);
+      margin-bottom: calcVw(-140);
+    }
+
+    &::before {
+      content: '駐車場はこちら↓↓';
+      color: red;
+      font-size: 18px;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include mq(sp) {
+        font-size: calcVw(16);
+        top: calcVw(70);
+      }
     }
     
     .img {
