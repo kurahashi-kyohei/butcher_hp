@@ -48,17 +48,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
     padding: 20px 40px;
     border: 3px solid red;
     color: red;
     margin-bottom: 60px;
+    position: relative;
 
     @include mq(sp) {
-      gap: calcVw(6);
+      gap: calcVw(15);
       padding: calcVw(12);
       border: calcVw(3) solid red;
       margin-bottom: calcVw(40);
+    }
+
+    &::before {
+      content: '[New]';
+      position: absolute;
+      top: 66px;
+      left: 45px;
+      font-weight: 800;
+      color: red;
+      font-size: 14px;
+
+      @include mq(sp) {
+        top: calcVw(48);
+        left: calcVw(15);
+        font-size: calcVw(12);
+      }
     }
 
     a {
@@ -92,6 +109,8 @@
         gap: calcVw(7);
       }
     }
+
+    
   }
 
   .desc {

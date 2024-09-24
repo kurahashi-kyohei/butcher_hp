@@ -8,7 +8,7 @@ const Main = () => {
     <div className={Style.main}>
       <div className={Style.text}>
         <h2>ブッチャー丸幸へ問い合わせ</h2>
-        <p>ご購入の際、何かご不明点がございましたら、こちらの電話番号・FAX・メール、またはお問い合わせフォームまでお問い合わせください。<br />営業時間外・定休日・祝日は対応しかねます。</p>
+        <p>ご購入の際や、お肉のことで何かご不明点・ご相談等ございましたら、こちらの電話番号・FAX・メール、またはお問い合わせフォームまでお問い合わせください。<br />営業時間外・定休日・祝日は対応しかねます。</p>
         <div className={Style.link}>
           <div className={Style.telephone_number}>
             <p>電話番号 : </p>
