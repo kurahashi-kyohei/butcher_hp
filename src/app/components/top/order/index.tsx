@@ -1,4 +1,5 @@
 import Style from './index.module.scss';
+import Link from 'next/link';
 
 const Order = () => {
   return (
@@ -13,6 +14,9 @@ const Order = () => {
         <p>受け取り時間は営業時間内、平日の11時〜13時は受け取り不可ですので、<br className={Style.sp_only}/>お気をつけください。</p>
       </div>
       <h3>お客様の笑顔のため、誠心誠意、真心を込めてお作りいたします。</h3>
+      <Link href="/schedule" className={Style.button}>
+          <span>ご注文・ご予約詳細へ</span>
+      </Link>
     </div>
   )
 }

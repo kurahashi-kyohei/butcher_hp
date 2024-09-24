@@ -102,4 +102,27 @@
       }
     }
   }
+  .button {
+    display: inline;
+    align-self: center;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+    border: 2.5px solid red;
+
+    @include mq(sp) {
+      padding: calcVw(8);
+      margin-top: calcVw(15);
+      border: calcVw(2) solid red;
+    }
+
+    span {
+      font-size: 20px;
+      color: red;
+
+      @include mq(sp) {
+        font-size: calcVw(16);
+      }
+    }
+  }
 }
