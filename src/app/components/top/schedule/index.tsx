@@ -23,7 +23,7 @@ const Schedule: React.FC = () => {
         <Link href="/schedule" className={Style.button}>
           <span>スケジュール詳細へ</span>
         </Link>
-        </div>
+      </div>
     </div>
   )
 }
