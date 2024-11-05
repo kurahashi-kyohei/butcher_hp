@@ -12,7 +12,6 @@ const Header = () => {
       // 直接 window.innerWidth を参照するように変更
       setUa(window.innerWidth);
     };
-    console.log('実行されました');
 
     // イベントリスナーを追加
     window.addEventListener('resize', handleResize, { passive: true });

@@ -13,6 +13,10 @@ export interface News {
   date: string;
   content: string;
 }
+export interface Calendar {
+  id: string;
+  date: string;
+}
 
 // お知らせ一覧を取得
 export async function getNewsList(): Promise<News[]> {
@@ -27,4 +31,9 @@ export async function getNews(id: string): Promise<News> {
     contentId: id,
   });
   return data;
+}
+
+export async function getCalendarList(): Promise<Calendar[]> {
+  const data = await client.get({ endpoint: "calendar" });
+  return data.contents;
 }
