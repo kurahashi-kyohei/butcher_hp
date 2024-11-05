@@ -1,9 +1,17 @@
 'use client';
 
-import { useState } from 'react';
 import Style from '../index.module.scss';
+import { Calendar, getCalendarList } from '../../../../../../lib/client';
+import { useEffect, useState } from 'react';
 
 const ThisMonth = () => {
+  const [calendarList, setCalendarList] = useState<Calendar[]>([]);
+  useEffect(() => {
+    getCalendarList().then((calendarList: Calendar[]) => {
+      setCalendarList(calendarList)
+    })
+  }, []);
+
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const now = currentDate;
@@ -27,13 +35,15 @@ const ThisMonth = () => {
     dates.unshift(<td key={`prev-${i}`} className={isSunday ? `${Style.prevMonth} ${Style.sunday}` : `${Style.prevMonth}`}>{prevMonthLastDay - i}</td>);
   }
 
+  //定休日の取得
+  const closeDay = calendarList.map((date) => date.date);
+
   // 当月の日付を追加
   for (let i = 1; i <= daysInMonth; i++) {
     const date = new Date(year, month, i);
     const isSunday = date.getDay() === 0;
     //定休日を追加
-    const closeDay = [4, 23];
-    const isCloseDay = closeDay.includes(i);
+    const isCloseDay = closeDay.includes(date.toISOString());
 
     dates.push(
       <td key={`current-${i}`} className={`${isCloseDay ? Style.close_day : ''} ${isSunday ? Style.sunday : ''}`}>{i}</td>
