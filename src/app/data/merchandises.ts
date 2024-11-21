@@ -373,33 +373,33 @@ const merchandises: merchandisesType[] = [
 
 const pickupRanking: pickupRankingType[] = [
   {
-    title: '牛 サガリ (タレ有・無)',
+    title: '彩美牛 肩ロース (すき焼き)',
     desc: '',
-    price: 500,
-    category: 'grilled',
+    price: 730,
+    category: 'saibi',
     amount: '100g',
     ranking: 1
   },
   {
-    title: '国産カルビー (タレ有・無)',
+    title: '彩美牛 もも (ローストビーフ)',
     desc: '',
-    price: 370,
-    category: 'grilled',
+    price: 480,
+    category: 'saibi',
     amount: '100g',
     ranking: 2
   },
   {
-    title: '牛 ホルモン (特タレ・塩タレ・無)',
+    title: 'ラムシャブ',
     desc: '',
-    price: 180,
+    price: 240,
     category: 'grilled',
     amount: '100g',
     ranking: 3
   },
   {
-    title: 'ラム (ジンタレ有・無)',
+    title: '牛タン',
     desc: '',
-    price: 240,
+    price: 600,
     category: 'grilled',
     amount: '100g',
     ranking: 4

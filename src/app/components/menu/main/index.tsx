@@ -30,7 +30,7 @@ const Main: React.FC = () => {
       </div>
 
       <div className={Style.pickup}>
-        <h3>オススメ　ランキング</h3>
+        <h3>秋冬　おすすめランキング</h3>
         <div className={Style.ranking}>
           {pickupRanking.map((merchandise, index) => {
             return(
