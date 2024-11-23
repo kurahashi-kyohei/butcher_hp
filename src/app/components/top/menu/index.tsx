@@ -13,7 +13,7 @@ const Menu: React.FC = () => {
       <div className={Style.container}>
         <div className={Style.text}>
           <div className={Style.pickup}>
-            <h3>オススメ　ランキング</h3>
+            <h3>スタッフが選んだベスト５</h3>
             <div className={Style.ranking}>
               {pickupRanking.map((merchandise, index) => {
                 return(
