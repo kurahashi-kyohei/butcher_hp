@@ -95,21 +95,21 @@
             background-image: url('/global/balloon.svg');
             background-repeat: no-repeat;
             background-position: bottom center;
-            width: 300px;
-            height: 38px;
+            width: 350px;
+            height: 42px;
             position: absolute;
-            top: -38px;
+            top: -42px;
             left: 0;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 500;
             padding-bottom: 10px;
     
             @include mq(sp) {
               width: calcVw(260);
-              height: calcVw(35);
-              top: calcVw(-35);
+              height: calcVw(38);
+              top: calcVw(-38);
               left: calcVw(-60);
-              font-size: calcVw(14);
+              font-size: calcVw(12);
               padding-bottom: calcVw(8);
             }
           }
