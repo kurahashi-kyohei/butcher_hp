@@ -15,8 +15,12 @@ const NextMonth = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const now = currentDate;
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  if(month == 12) {
+    year += 1;
+    month = 0;
+  }
 
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
