@@ -15,7 +15,7 @@ const Main = () => {
             <a href='tel:011-851-6398'>(011)-851-6398</a>
           </div>
           <p>FAX : 851-0815</p>
-          <p>メール : buchermarukou@outlook.jp</p>
+          <p>メール : buchermarukou@gmail.com</p>
           <a href='https://docs.google.com/forms/d/1mHz5p091_2qVSYbMUUZwqd9pyfw4fUMVdQgLKhwf9E8/edit?pli=1'>お問い合わせフォーム</a>
         </div>
       </div>
