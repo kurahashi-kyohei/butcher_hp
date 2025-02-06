@@ -8,7 +8,7 @@ const Main: React.FC = () => {
   return (
     <div className={Style.main}>
       <div className={Style.download}>
-        <a href="https://drive.google.com/file/d/1gFP6HocK-_DFtJXmiiIlR2j4N3gXEVZw/view?usp=drivesdk">メニューのダウンロードはこちらから</a>
+        <a href="https://drive.google.com/file/d/1Ki1l1HHeq_lhVjdgzQRFRP7zif2mhFUH/view?usp=sharing">メニューのダウンロードはこちらから</a>
       </div>
       <div className={Style.note}>
         <p>お肉の厚さ、切り方、味付けはご希望通りにいたします。</p>
