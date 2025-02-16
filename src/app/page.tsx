@@ -1,5 +1,3 @@
-'use client';
-
 import type { NextPage } from 'next';
 import Style from '@/app/styles/scss/module/top.module.scss';
 import Mv from './components/top/mv';

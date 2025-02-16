@@ -1,9 +1,9 @@
 'use client'
 
-import { News, getNewsList } from '../../../../../lib/client';
+import type { News } from '../../../../../lib/client';
+import { getNewsList } from '../../../../../lib/client';
 import { useEffect, useState } from 'react';
 import Style from './index.module.scss';
-import news from '@/app/data/news';
 import Link from 'next/link';
 
 const News = () => {
