@@ -1,5 +1,3 @@
-'use client';
-
 import Style from './index.module.scss';
 import Image from 'next/image';
 
