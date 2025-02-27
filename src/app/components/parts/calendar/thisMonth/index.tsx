@@ -1,18 +1,9 @@
-'use client';
-
 import Style from '../index.module.scss';
 import { Calendar, getCalendarList } from '../../../../../../lib/client';
-import { useEffect, useState } from 'react';
 
-const ThisMonth = () => {
-  const [calendarList, setCalendarList] = useState<Calendar[]>([]);
-  useEffect(() => {
-    getCalendarList().then((calendarList: Calendar[]) => {
-      setCalendarList(calendarList)
-    })
-  }, []);
-
-  const [currentDate, setCurrentDate] = useState(new Date());
+export default async function ThisMonth() {
+  const calendarList = await getCalendarList();
+  const currentDate = new Date();
 
   const now = currentDate;
   const year = now.getFullYear();
@@ -92,5 +83,3 @@ const ThisMonth = () => {
     </div>
   )
 }
-
-export default ThisMonth;

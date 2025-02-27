@@ -1,18 +1,10 @@
-'use client'
-
 import type { News } from '../../../../../lib/client';
 import { getNewsList } from '../../../../../lib/client';
-import { useEffect, useState } from 'react';
 import Style from './index.module.scss';
 import Link from 'next/link';
 
-const News = () => {
-  const [newsList, setNewsList] = useState<News[]>([]);
-  useEffect(() => {
-    getNewsList().then((newsList: News[]) => {
-      setNewsList(newsList)
-    })
-  }, []);
+export default async function News() {
+  const newsList = await getNewsList();
 
   return (
     <div className={Style.news}>
@@ -33,5 +25,3 @@ const News = () => {
     </div>
   )
 }
-
-export default News;
