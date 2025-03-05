@@ -27,8 +27,7 @@ export async function getNewsList(): Promise<News[]> {
 // お知らせ詳細を取得
 export async function getNews(id: string): Promise<News> {
   const data = await client.get({
-    endpoint: "news",
-    contentId: id,
+    endpoint: `news/${id}`,
   });
   return data;
 }

@@ -1,19 +1,20 @@
-'use client'
-
-import { NextPage } from 'next';
-import { usePathname } from 'next/navigation'; 
+import categories from '@/app/data/category';
 import CategoryContainer from '../../components/menu/categoryContainer';
 import Mv from '../../components/menu/mv';
 
-const Category: NextPage = () => {
-  const path = usePathname();
+export default async function Category({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params;
 
   return (
     <>
       <Mv />
-      <CategoryContainer path={path || ''} />
+      <CategoryContainer path={category} />
     </>
   )
 }
 
-export default Category;
+export async function generateStaticParams() {
+  return categories.map((category) => ({
+    category: category.href,
+  }));
+}

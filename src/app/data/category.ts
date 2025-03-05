@@ -6,27 +6,27 @@ type categoriesType = {
 const categories: categoriesType[] = [
   {
     title: '豚肉',
-    href: '/menu/pork'
+    href: 'pork'
   },
   {
     title: '鶏肉',
-    href: '/menu/chicken'
+    href: 'chicken'
   },
   {
     title: '牛肉',
-    href: '/menu/beef'
+    href: 'beef'
   },
   {
     title: '十勝彩美牛',
-    href: '/menu/saibi'
+    href: 'saibi'
   },
   {
     title: '加工食品',
-    href: '/menu/processing'
+    href: 'processing'
   },
   {
     title: '焼肉・バーベキュー',
-    href: '/menu/grilled'
+    href: 'grilled'
   },
 ]
 

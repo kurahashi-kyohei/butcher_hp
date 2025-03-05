@@ -1,20 +1,22 @@
-import { NextPage } from 'next';
+import { getNewsList } from '../../../../lib/client';
 import Mv from '@/app/components/news/mv';
 import NewsDetailContainer from '@/app/components/news/main/newsDetailContainer';
 
-interface NewsDetailPageProps {
-  params: {
-    id: string;
-  };
-}
+export default async function NewsDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
-const NewsDetail: NextPage<NewsDetailPageProps> = ({ params }) => {
   return (
     <>
       <Mv />
-      <NewsDetailContainer path={params} />
+      <NewsDetailContainer path={id} />
     </>
   )
 }
 
-export default NewsDetail;
+export async function generateStaticParams() {
+  const posts = await getNewsList();
+  
+  return posts.map((post) => ({
+    id: post.id.toString()
+  }));
+}

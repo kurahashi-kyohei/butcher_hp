@@ -3,7 +3,8 @@ import { merchandises } from '@/app/data/merchandises';
 import categories from '@/app/data/category';
 import Link from 'next/link';
 
-const CategoryContainer: React.FC<{ path: string }> = ({ path }) => {
+
+export default function CategoryContainer({ path }: { path: string }) {
   return (
     <div className={Style.categories}>
       {categories.map((category, index) => {
@@ -17,7 +18,7 @@ const CategoryContainer: React.FC<{ path: string }> = ({ path }) => {
       <div className={Style.merchandises}>
         {merchandises.map((merchandise, index) => {
           return(
-            (`/menu/${merchandise.category}` === path)
+            (merchandise.category === path)
             ?
             <div key={index} className={Style.merchandise}>
               <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
@@ -39,4 +40,8 @@ const CategoryContainer: React.FC<{ path: string }> = ({ path }) => {
   )
 }
 
-export default CategoryContainer;
+export async function generateStaticParams() {
+  return categories.map((category) => ({
+    id: category.href,
+  }));
+}

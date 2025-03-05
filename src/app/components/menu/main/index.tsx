@@ -1,6 +1,5 @@
 import Style from './index.module.scss';
 import Link from 'next/link';
-import Image from 'next/image';
 import { merchandises, pickupRanking } from '@/app/data/merchandises';
 import categories from '@/app/data/category';
 
@@ -21,7 +20,7 @@ const Main: React.FC = () => {
         <div className={Style.categories}>
           {categories.map((category, index) => {
             return (
-              <Link key={index} href={category.href} className={Style.category}>
+              <Link key={index} href={`/menu/${category.href}`} className={Style.category}>
                 <h4>{category.title}</h4>
               </Link>
             );
@@ -58,7 +57,7 @@ const Main: React.FC = () => {
                 <h4>{category.title}</h4>
                 {merchandises.map((merchandise, index) => {
                   return(
-                    (`/menu/${merchandise.category}` === category.href)
+                    (merchandise.category === category.href)
                     ?
                     <div key={index} className={Style.merchandise}>
                       <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
