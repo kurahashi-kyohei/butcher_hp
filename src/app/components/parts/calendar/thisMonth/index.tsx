@@ -1,5 +1,5 @@
 import Style from '../index.module.scss';
-import { Calendar, getCalendarList } from '../../../../../../lib/client';
+import { getCalendarList } from '../../../../../../lib/client';
 
 export default async function ThisMonth() {
   const calendarList = await getCalendarList();
