@@ -1,9 +1,9 @@
 import Style from '../index.module.scss';
 import { getCalendarList } from '../../../../../../lib/client';
-import { promises } from 'dns';
 
 export default async function ThisMonth() {
   const calendarList = await getCalendarList();
+  console.log(calendarList);
   const currentDate = new Date();
 
   const now = currentDate;
