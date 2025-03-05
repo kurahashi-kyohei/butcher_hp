@@ -3,8 +3,6 @@ import Link from 'next/link';
 import Calendar from '../../parts/calendar';
 import { Suspense } from "react";
 
-export const experimental_ppr = true;
-
 const Schedule = () => {
 
   return (

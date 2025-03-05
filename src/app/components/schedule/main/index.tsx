@@ -2,8 +2,6 @@ import Style from './index.module.scss';
 import Calendar from '../../parts/calendar';
 import { Suspense } from "react";
 
-export const experimental_ppr = true;
-
 const Main = () => {
   return (
     <div className={Style.main}>
