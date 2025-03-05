@@ -3,7 +3,6 @@ import { getCalendarList } from '../../../../../../lib/client';
 
 export default async function ThisMonth() {
   const calendarList = await getCalendarList();
-  console.log(calendarList);
   const currentDate = new Date();
 
   const now = currentDate;
