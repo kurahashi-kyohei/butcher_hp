@@ -40,8 +40,8 @@ export default function CategoryContainer({ path }: { path: string }) {
   )
 }
 
-export async function generateStaticParams() {
-  return categories.map((category) => ({
-    id: category.href,
-  }));
-}
+// export async function generateStaticParams() {
+//   return categories.map((category) => ({
+//     id: category.href,
+//   }));
+// }

@@ -13,10 +13,10 @@ export default async function NewsDetail({ params }: { params: Promise<{ id: str
   )
 }
 
-export async function generateStaticParams() {
-  const posts = await getNewsList();
+// export async function generateStaticParams() {
+//   const posts = await getNewsList();
   
-  return posts.map((post) => ({
-    id: post.id.toString()
-  }));
-}
+//   return posts.map((post) => ({
+//     id: post.id.toString()
+//   }));
+// }
