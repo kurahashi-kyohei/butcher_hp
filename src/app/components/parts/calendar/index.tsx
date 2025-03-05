@@ -1,6 +1,7 @@
-import Style from './index.module.scss';
 import ThisMonth from './thisMonth';
 import NextMonth from './nextMonth';
+
+
 
 const Calendar = () => {
   const day = new Date();

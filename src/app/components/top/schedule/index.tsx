@@ -1,17 +1,20 @@
-import React from 'react';
 import Style from './index.module.scss';
-import Image from 'next/image';
 import Link from 'next/link';
 import Calendar from '../../parts/calendar';
+import { Suspense } from "react";
 
-const Schedule: React.FC = () => {
+export const experimental_ppr = true;
+
+const Schedule = () => {
 
   return (
     <div className={Style.schedule}>
       <h2>スケジュール</h2>
       <div className={Style.container}>
         <div className={Style.calendar}>
-          <Calendar />
+          <Suspense fallback={<>loading...</>}>
+            <Calendar />
+          </Suspense>
         </div>
         <div className={Style.desc}>
           <p>：定休日 (日曜日・祝日)</p>
