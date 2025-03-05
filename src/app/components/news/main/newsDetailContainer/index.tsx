@@ -20,10 +20,10 @@ export default async function NewsDetailContainer({ path }: { path: string }) {
   )
 }
 
-export async function generateStaticParams() {
-  const contentIds = await getNewsList();
+// export async function generateStaticParams() {
+//   const contentIds = await getNewsList();
 
-  return contentIds.map((contentId) => ({
-    id: contentId,
-  }));
-}
+//   return contentIds.map((contentId) => ({
+//     id: contentId,
+//   }));
+// }
