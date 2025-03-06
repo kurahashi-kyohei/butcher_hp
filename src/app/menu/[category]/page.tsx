@@ -13,8 +13,8 @@ export default async function Category({ params }: { params: Promise<{ category:
   )
 }
 
-// export async function generateStaticParams() {
-//   return categories.map((category) => ({
-//     category: category.href,
-//   }));
-// }
+export async function generateStaticParams() {
+  return categories.map((category) => ({
+    category: category.href,
+  }));
+}
