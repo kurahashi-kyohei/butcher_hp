@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import '@/app/styles/scss/global/index.scss'
 import { notojp } from "./styles/font";
-import { Suspense } from 'react'
 import { ClientLayout } from '@/components/layouts/ClientLayout';
 
 export const metadata: Metadata = {
