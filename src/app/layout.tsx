@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import '@/app/styles/scss/global/index.scss'
-import Header from "./components/layouts/header";
-import Footer from "./components/layouts/footer";
 import { notojp } from "./styles/font";
 import { Suspense } from 'react'
+import { ClientLayout } from '@/components/layouts/ClientLayout';
 
 export const metadata: Metadata = {
   title: "ブッチャー丸幸 | Official Web Site",
@@ -11,27 +10,16 @@ export const metadata: Metadata = {
   icons: '/global/icon.svg'
 };
 
-function SearchBarFallback() {
-  return <>placeholder</>
-}
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-
+}) {
   return (
-    <>
-      <html lang="ja">
-        <body className={notojp.className}>
-          <Suspense fallback={<SearchBarFallback />}>
-            <Header />
-          </Suspense>
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </>
+    <html lang="ja">
+      <body className={notojp.className}>
+        <ClientLayout>{children}</ClientLayout>
+      </body>
+    </html>
   );
 }

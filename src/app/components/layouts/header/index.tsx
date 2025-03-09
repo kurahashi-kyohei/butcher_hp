@@ -3,33 +3,35 @@
 import { useState, useEffect } from 'react';
 import HeaderPc from './header_pc';
 import HeaderSp from './header_sp';
+import { useCallback } from 'react';
 
 const Header = () => {
   const [ua, setUa] = useState(0);
 
-  useEffect(() => {
-    const handleResize = () => {
-      // 直接 window.innerWidth を参照するように変更
-      setUa(window.innerWidth);
-    };
+  // handleResizeをuseCallbackでメモ化
+  const handleResize = useCallback(() => {
+    // throttleを実装して頻繁な更新を防ぐ
+    const width = window.innerWidth;
+    if (Math.abs(width - ua) > 100) { // 100px以上の変化がある場合のみ更新
+      setUa(width);
+    }
+  }, [ua]);
 
-    // イベントリスナーを追加
-    window.addEventListener('resize', handleResize, { passive: true });
-    // 初期値を設定
+  useEffect(() => {
+    // ResizeObserverを使用してよりパフォーマンスの良いリサイズ検知
+    const observer = new ResizeObserver(handleResize);
+    observer.observe(document.documentElement);
     handleResize();
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); // 依存配列は変更なし
+    return () => observer.disconnect();
+  }, [handleResize]);
+
+  // 早期リターンでレンダリングを最適化
+  if (ua === 0) return null;
 
   return (
     <>
-      {ua > 1024 ? (
-        <HeaderPc />
-      ) : (
-        <HeaderSp />
-      )}
+      {ua > 1024 ? <HeaderPc /> : <HeaderSp />}
     </>
   );
 };
