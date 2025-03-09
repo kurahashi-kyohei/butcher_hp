@@ -1,4 +1,4 @@
-import { News, getNews, getNewsList } from '../../../../../../lib/client';
+import { News, getNews } from '../../../../../../lib/client';
 import parse from 'html-react-parser';
 import Style from './index.module.scss';
 
@@ -19,11 +19,3 @@ export default async function NewsDetailContainer({ path }: { path: string }) {
     </div>
   )
 }
-
-// export async function generateStaticParams() {
-//   const contentIds = await getNewsList();
-
-//   return contentIds.map((contentId) => ({
-//     id: contentId,
-//   }));
-// }
