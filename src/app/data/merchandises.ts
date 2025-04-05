@@ -405,11 +405,11 @@ const pickupRanking: pickupRankingType[] = [
     ranking: 4
   },
   {
-    title: '牛 タン 1本売り (約800g〜)',
+    title: '牛 タン',
     desc: '',
     price: 600,
     category: 'grilled',
-    amount: '約800g〜',
+    amount: '100g',
     ranking: 5
   },
 ]
