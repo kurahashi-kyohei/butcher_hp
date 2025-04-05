@@ -33,6 +33,23 @@
     }
   }
 
+  h3 {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    font-size: 26px;
+    padding-bottom: 20px;
+    margin: 0 auto 30px;
+
+    @include mq(sp) {
+      border-bottom: calcVw(2) solid #000;
+      font-size: calcVw(24);
+      padding-bottom: calcVw(12);
+      margin: 0 auto calcVw(20);
+    }
+  }
+
   .container {
     width: 100%;
     display: flex;
@@ -60,132 +77,132 @@
         gap: calcVw(30);
       }
   
-      .pickup {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-top: 30px;
+      // .pickup {
+      //   width: 100%;
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+      //   gap: 30px;
+      //   margin-top: 30px;
         
-        @include mq(sp) {
-          gap: calcVw(20);
-          margin-top: calcVw(30);
-        }
+      //   @include mq(sp) {
+      //     gap: calcVw(20);
+      //     margin-top: calcVw(30);
+      //   }
   
-        h3 {
-          width: 100%;
-          text-align: center;
-          border-bottom: 2px solid #000;
-          font-size: 24px;
-          padding-bottom: 20px;
-          position: relative;
+      //   h3 {
+      //     width: 100%;
+      //     text-align: center;
+      //     border-bottom: 2px solid #000;
+      //     font-size: 24px;
+      //     padding-bottom: 20px;
+      //     position: relative;
       
-          @include mq(sp) {
-            border-bottom: calcVw(2) solid #000;
-            font-size: calcVw(20);
-            padding-bottom: calcVw(15);
-          }
+      //     @include mq(sp) {
+      //       border-bottom: calcVw(2) solid #000;
+      //       font-size: calcVw(20);
+      //       padding-bottom: calcVw(15);
+      //     }
 
-          &::before {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            content: '秋冬の季節におすすめ❗️';
-            background-image: url('/global/balloon.svg');
-            background-repeat: no-repeat;
-            background-position: bottom center;
-            width: 350px;
-            height: 42px;
-            position: absolute;
-            top: -42px;
-            left: 0;
-            font-size: 14px;
-            font-weight: 500;
-            padding-bottom: 10px;
+      //     &::before {
+      //       display: flex;
+      //       align-items: center;
+      //       justify-content: center;
+      //       content: '秋冬の季節におすすめ❗️';
+      //       background-image: url('/global/balloon.svg');
+      //       background-repeat: no-repeat;
+      //       background-position: bottom center;
+      //       width: 350px;
+      //       height: 42px;
+      //       position: absolute;
+      //       top: -42px;
+      //       left: 0;
+      //       font-size: 14px;
+      //       font-weight: 500;
+      //       padding-bottom: 10px;
     
-            @include mq(sp) {
-              width: calcVw(260);
-              height: calcVw(38);
-              top: calcVw(-38);
-              left: calcVw(-60);
-              font-size: calcVw(12);
-              padding-bottom: calcVw(8);
-            }
-          }
-        }
+      //       @include mq(sp) {
+      //         width: calcVw(260);
+      //         height: calcVw(38);
+      //         top: calcVw(-38);
+      //         left: calcVw(-60);
+      //         font-size: calcVw(12);
+      //         padding-bottom: calcVw(8);
+      //       }
+      //     }
+      //   }
     
-        .ranking {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 18px;
-          margin: 0 auto;
-          width: 100%;
+      //   .ranking {
+      //     display: flex;
+      //     flex-direction: column;
+      //     justify-content: center;
+      //     flex-wrap: wrap;
+      //     gap: 18px;
+      //     margin: 0 auto;
+      //     width: 100%;
     
-          @include mq(sp) {
-            justify-content: center;
-            gap: calcVw(15);
-          }
+      //     @include mq(sp) {
+      //       justify-content: center;
+      //       gap: calcVw(15);
+      //     }
     
-          .merchandise {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+      //     .merchandise {
+      //       display: flex;
+      //       flex-direction: column;
+      //       gap: 8px;
     
-            @include mq(sp) {
-              gap: calcVw(8);
-            }
+      //       @include mq(sp) {
+      //         gap: calcVw(8);
+      //       }
 
-            .title {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: 10px;
+      //       .title {
+      //         display: flex;
+      //         align-items: center;
+      //         justify-content: space-between;
+      //         gap: 10px;
     
-              @include mq(sp) {
-                gap: calcVw(8);
-              }
+      //         @include mq(sp) {
+      //           gap: calcVw(8);
+      //         }
     
-              h4 {
-                font-size: 20px;
-                font-weight: 600;
+      //         h4 {
+      //           font-size: 20px;
+      //           font-weight: 600;
                 
-                @include mq(sp) {
-                  font-size: calcVw(16);
-                }
-              }
+      //           @include mq(sp) {
+      //             font-size: calcVw(16);
+      //           }
+      //         }
     
-              div {
-                font-size: 18px;
+      //         div {
+      //           font-size: 18px;
                 
-                @include mq(sp) {
-                  font-size: calcVw(14);
-                }
-              }
-            }
+      //           @include mq(sp) {
+      //             font-size: calcVw(14);
+      //           }
+      //         }
+      //       }
     
-            .price {
-              display: flex;
-              gap: 15px;
-              align-self: flex-end;
+      //       .price {
+      //         display: flex;
+      //         gap: 15px;
+      //         align-self: flex-end;
     
-              p {
-                font-size: 18px;
+      //         p {
+      //           font-size: 18px;
                 
-                @include mq(sp) {
-                  font-size: calcVw(14);
-                } 
+      //           @include mq(sp) {
+      //             font-size: calcVw(14);
+      //           } 
     
-                &:last-child {
-                  color: red;
-                }
-              }
-            }
-          }
-        }
-      }
+      //           &:last-child {
+      //             color: red;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
   
       .button {
         padding: 12px;

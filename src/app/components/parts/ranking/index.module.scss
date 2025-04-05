@@ -1,0 +1,125 @@
+@use 'src/app/styles/scss/utils/index.scss' as *;
+
+
+.pickup {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  @include mq(sp) {
+    margin-top: calcVw(40);
+  }
+
+  h3 {
+    position: relative;
+
+    &::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: 'バーベキューの季節到来❗️';
+      background-image: url('/global/balloon.svg');
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      width: 100%;
+      max-width: 350px;
+      max-height: 45px;
+      height: 100%;
+      position: absolute;
+      top: -42px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 500;
+      padding-bottom: 10px;
+
+      @include mq(sp) {
+        width: calcVw(280);
+        height: calcVw(38);
+        top: calcVw(-38);
+        left: calcVw(-60);
+        font-size: calcVw(12);
+        padding-bottom: calcVw(8);
+      }
+    }
+  }
+
+  .ranking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+
+    @include mq(sp) {
+      max-width: none;
+      gap: calcVw(15);
+      justify-content: center;
+    }
+
+    .merchandise {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      @include mq(sp) {
+        gap: calcVw(8);
+      }
+
+      
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        @include mq(sp) {
+          gap: calcVw(8);
+        }
+
+        h4 {
+          font-size: 20px;
+          font-weight: 600;
+          
+          @include mq(sp) {
+            font-size: calcVw(16);
+          }
+        }
+
+        div {
+          font-size: 18px;
+          
+          @include mq(sp) {
+            font-size: calcVw(14);
+          }
+        }
+      }
+
+      .price {
+        display: flex;
+        gap: 15px;
+        align-self: flex-end;
+
+        p {
+          font-size: 18px;
+          
+          @include mq(sp) {
+            font-size: calcVw(14);
+          } 
+
+          &:last-child {
+            color: red;
+          }
+        }
+
+        
+      }
+    }
+  }
+}
