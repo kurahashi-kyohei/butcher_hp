@@ -2,8 +2,7 @@ import React from 'react';
 import Style from './index.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { pickupRanking } from '@/app/data/merchandises';
-
+import Ranking from '@/app/components/parts/ranking';
 
 
 const Menu: React.FC = () => {
@@ -12,7 +11,7 @@ const Menu: React.FC = () => {
       <h2>メニュー</h2>
       <div className={Style.container}>
         <div className={Style.text}>
-          <div className={Style.pickup}>
+          {/* <div className={Style.pickup}>
             <h3>スタッフが選んだベスト５</h3>
             <div className={Style.ranking}>
               {pickupRanking.map((merchandise, index) => {
@@ -30,7 +29,8 @@ const Menu: React.FC = () => {
                 )
               })}
             </div>
-          </div>
+          </div> */}
+          <Ranking />
           <Link href="/menu" className={Style.button}>
             <span>メニュー一覧へ</span>
           </Link>
