@@ -3,7 +3,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Netlify用の設定
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig;
