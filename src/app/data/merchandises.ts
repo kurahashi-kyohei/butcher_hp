@@ -282,7 +282,7 @@ const merchandises: merchandisesType[] = [
   {
     title: '牛 タン 1本売り (約800g〜)',
     desc: '',
-    price: 660,
+    price: 600,
     category: 'grilled',
   },
   {
@@ -373,43 +373,43 @@ const merchandises: merchandisesType[] = [
 
 const pickupRanking: pickupRankingType[] = [
   {
-    title: '彩美牛 肩ロース (すき焼き)',
+    title: '牛 サガリ (タレ)',
     desc: '',
-    price: 730,
-    category: 'saibi',
+    price: 500,
+    category: 'grilled',
     amount: '100g',
     ranking: 1
   },
   {
-    title: '彩美牛 もも (ローストビーフ)',
+    title: '豚 ホルモン (塩タレ)',
     desc: '',
-    price: 480,
-    category: 'saibi',
+    price: 180,
+    category: 'grilled',
     amount: '100g',
     ranking: 2
   },
   {
-    title: 'ラムシャブ',
+    title: '豚 サガリ (塩タレ)',
     desc: '',
-    price: 240,
+    price: 550,
     category: 'grilled',
-    amount: '100g',
+    amount: '300g 1p',
     ranking: 3
   },
   {
-    title: '牛タン',
+    title: 'ラム肉 (ジンたれ)',
     desc: '',
-    price: 600,
+    price: 240,
     category: 'grilled',
     amount: '100g',
     ranking: 4
   },
   {
-    title: '豚サガリ (塩味付)',
+    title: '牛 タン',
     desc: '',
-    price: 550,
+    price: 600,
     category: 'grilled',
-    amount: '300g 1p',
+    amount: '100g',
     ranking: 5
   },
 ]

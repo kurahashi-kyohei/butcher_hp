@@ -2,7 +2,7 @@ import Style from './index.module.scss';
 import Link from 'next/link';
 import { merchandises, pickupRanking } from '@/app/data/merchandises';
 import categories from '@/app/data/category';
-
+import Ranking from '@/app/components/parts/ranking';
 const Main: React.FC = () => {
   return (
     <div className={Style.main}>
@@ -28,7 +28,7 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      <div className={Style.pickup}>
+      {/* <div className={Style.pickup}>
         <h3>スタッフが選んだベスト５</h3>
         <div className={Style.ranking}>
           {pickupRanking.map((merchandise, index) => {
@@ -46,7 +46,8 @@ const Main: React.FC = () => {
             )
           })}
         </div>
-      </div>
+      </div> */}
+      <Ranking />
 
       <div className={Style.all}>
         <h3>商品一覧</h3>
