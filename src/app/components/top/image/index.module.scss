@@ -1,16 +1,18 @@
 @use 'src/app/styles/scss/utils/index.scss' as *;
 
 .img_wrapper {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
-  height: 400px;
+  height: 800px;
   position: relative;
   align-self: center;
-  margin-top: 60px;
+  margin-top: 20px;
+  margin-bottom: -400px;
 
   @include mq(sp) {
-    height: calcVw(200);
-    margin-top: calcVw(40);
+    height: calcVw(280);
+    margin-top: calcVw(20);
+    margin-bottom: calcVw(-120);
   }
   
   .img {
