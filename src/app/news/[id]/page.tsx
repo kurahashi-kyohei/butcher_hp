@@ -8,7 +8,8 @@ interface NewsDetailPageProps {
   };
 }
 
-const NewsDetail: NextPage<NewsDetailPageProps> = ({ params }) => {
+const NewsDetail: NextPage<NewsDetailPageProps> = async props => {
+  const params = await props.params;
   return (
     <>
       <Mv />
