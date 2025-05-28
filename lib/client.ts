@@ -16,19 +16,34 @@ export interface News {
 export interface Calendar {
   id: string;
   date: string;
+  close: boolean;
 }
 
 // お知らせ一覧を取得
 export async function getNewsList(): Promise<News[]> {
-  const data = await client.get({ endpoint: "news" });
+  const data = await client.get({
+    endpoint: "news",
+    // customRequestInit: {
+    //   cache: 'force-cache',
+    //   next: {
+    //     revalidate: 3600 
+    //   }
+    // }
+  });
   return data.contents;
 }
-
 // お知らせ詳細を取得
 export async function getNews(id: string): Promise<News> {
   const data = await client.get({
     endpoint: "news",
     contentId: id,
+    
+    // customRequestInit: {
+    //   cache: 'force-cache',
+    //   next: {
+    //     revalidate: 3600 
+    //   }
+    // }
   });
   return data;
 }

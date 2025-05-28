@@ -1,13 +1,13 @@
-'use client';
-
 import Style from '../index.module.scss';
-import { Calendar, getCalendarList } from '../../../../../../lib/client';
-import { useEffect, useState } from 'react';
+import { getCalendarList } from '../../../../../../lib/client';
+import { useState, useEffect } from 'react';
+import { calendarType } from '@/app/types';
 
 const ThisMonth = () => {
-  const [calendarList, setCalendarList] = useState<Calendar[]>([]);
+  const [calendarList, setCalendarList] = useState<calendarType[]>([]);
+  
   useEffect(() => {
-    getCalendarList().then((calendarList: Calendar[]) => {
+    getCalendarList().then((calendarList: calendarType[]) => {
       setCalendarList(calendarList)
     })
   }, []);
