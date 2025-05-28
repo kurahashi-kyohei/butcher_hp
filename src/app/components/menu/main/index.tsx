@@ -21,6 +21,8 @@ const Main: React.FC = () => {
         <div className={Style.categories}>
           {categories.map((category, index) => {
             return (
+              (category.title === 'タレ') ? 
+              '' :
               <Link key={index} href={category.href} className={Style.category}>
                 <h4>{category.title}</h4>
               </Link>
