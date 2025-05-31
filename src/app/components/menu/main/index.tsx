@@ -1,3 +1,4 @@
+import React from 'react';
 import Style from './index.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -21,6 +22,8 @@ const Main: React.FC = () => {
         <div className={Style.categories}>
           {categories.map((category, index) => {
             return (
+              (category.title === 'タレ') ? 
+              '' :
               <Link key={index} href={category.href} className={Style.category}>
                 <h4>{category.title}</h4>
               </Link>
@@ -51,7 +54,7 @@ const Main: React.FC = () => {
                     (`/menu/${merchandise.category}` === category.href)
                     ?
                     <div key={index} className={Style.merchandise}>
-                      <p className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></p>
+                      <p className={`${Style.title} ${merchandise.pickup ? Style.pickup : ''}`} dangerouslySetInnerHTML={{ __html: merchandise.title }}></p>
                       <p className={Style.price}>{merchandise.price}円（税込）</p>
                     </div>
                     : ''

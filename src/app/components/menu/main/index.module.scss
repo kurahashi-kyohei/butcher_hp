@@ -204,7 +204,7 @@
           .title {
             font-size: 18px;
             position: relative;
-            padding-left: 10px;
+            padding-left: 10px;;
             
             @include mq(sp) {
               font-size: calcVw(14);
@@ -218,6 +218,32 @@
       
               @include mq(sp) {
                 left: calcVw(-8);
+              }
+            }
+          }
+
+          .pickup {
+            position: relative;
+            padding-bottom: 20px;
+
+            @include mq(sp) {
+              padding-bottom: calcVw(16);
+            }
+
+            &::after {
+              content: '↑オススメ';
+              font-size: 20px;
+              color: red;
+              font-weight: 500;
+              position: absolute;
+              top: 50px;
+              left: 20px;
+              transform: translateY(-50%);
+
+              @include mq(sp) {
+                top: calcVw(40);
+                left: calcVw(16);
+                font-size: calcVw(16);
               }
             }
           }
