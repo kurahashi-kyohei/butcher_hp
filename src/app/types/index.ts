@@ -2,6 +2,7 @@ interface merchandisesType {
   title: string,
   price: number | string,
   category: string,
+  pickup: boolean,
 }
 
 interface pickupMerchandisesType {
