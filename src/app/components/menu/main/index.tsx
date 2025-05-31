@@ -1,3 +1,4 @@
+import React from 'react';
 import Style from './index.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,7 +9,7 @@ const Main: React.FC = () => {
   return (
     <div className={Style.main}>
       <div className={Style.download}>
-        <a href="https://drive.google.com/file/d/1Ki1l1HHeq_lhVjdgzQRFRP7zif2mhFUH/view?usp=sharing">メニューのダウンロードはこちらから</a>
+        <a href="https://drive.google.com/file/d/1QOgbKalFuHThSgMxZ_8UzCJ67ofW_pDQ/view?usp=sharing">メニューのダウンロードはこちらから</a>
       </div>
       <div className={Style.note}>
         <p>お肉の厚さ、切り方、味付けはご希望通りにいたします。</p>
@@ -21,6 +22,8 @@ const Main: React.FC = () => {
         <div className={Style.categories}>
           {categories.map((category, index) => {
             return (
+              (category.title === 'タレ') ? 
+              '' :
               <Link key={index} href={category.href} className={Style.category}>
                 <h4>{category.title}</h4>
               </Link>
@@ -29,25 +32,6 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      {/* <div className={Style.pickup}>
-        <h3>スタッフが選んだベスト５</h3>
-        <div className={Style.ranking}>
-          {pickupRanking.map((merchandise, index) => {
-            return(
-              <div key={index} className={Style.merchandise}>
-                <div className={Style.title}>
-                  <h4>{merchandise.ranking}位</h4>
-                  <div dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
-                </div>
-                <div className={Style.price}>
-                  <p>{merchandise.amount}</p>
-                  <p>{merchandise.price}円</p>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div> */}
       <Ranking />
 
       <div className={Style.all}>
@@ -58,14 +42,23 @@ const Main: React.FC = () => {
               <div key={index} className={Style.category}>
                 <h4>{category.title}</h4>
                 {merchandises.map((merchandise, index) => {
+                  if (`/menu/${merchandise.category}` === category.href && merchandise.category === 'tare') {
+                    return(
+                      <div key={index} className={Style.merchandise}>
+                        <p className={Style.tare_title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></p>
+                      </div>
+                    )
+                  }
+
                   return(
                     (`/menu/${merchandise.category}` === category.href)
                     ?
                     <div key={index} className={Style.merchandise}>
-                      <div className={Style.title} dangerouslySetInnerHTML={{ __html: merchandise.title }}></div>
+                      <p className={`${Style.title} ${merchandise.pickup ? Style.pickup : ''}`} dangerouslySetInnerHTML={{ __html: merchandise.title }}></p>
                       <p className={Style.price}>{merchandise.price}円（税込）</p>
                     </div>
                     : ''
+                    
                   );
                 })}
               </div>

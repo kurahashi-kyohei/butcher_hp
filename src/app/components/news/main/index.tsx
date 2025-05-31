@@ -1,17 +1,9 @@
-'use client'
-
 import { News, getNewsList } from '../../../../../lib/client';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import Style from './index.module.scss';
 
-const Main = () => {
-  const [newsList, setNewsList] = useState<News[]>([]);
-  useEffect(() => {
-    getNewsList().then((newsList: News[]) => {
-      setNewsList(newsList)
-    })
-  }, []);
+const Main = async () => {
+  const newsList = await getNewsList();
 
   return (
     <div className={Style.news}>

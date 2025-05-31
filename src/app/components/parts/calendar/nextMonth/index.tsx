@@ -1,20 +1,19 @@
 'use client';
 
 import Style from '../index.module.scss';
-import { Calendar, getCalendarList } from '../../../../../../lib/client';
-import { useEffect, useState } from 'react';
+import { getCalendarList } from '../../../../../../lib/client';
+import { useState, useEffect } from 'react';
+import { calendarType } from '@/app/types';
 
 const NextMonth = () => {
-  const [calendarList, setCalendarList] = useState<Calendar[]>([]);
+  const [calendarList, setCalendarList] = useState<calendarType[]>([]);
   useEffect(() => {
-    getCalendarList().then((calendarList: Calendar[]) => {
+    getCalendarList().then((calendarList: calendarType[]) => {
       setCalendarList(calendarList)
     })
   }, []);
 
-  const [currentDate, setCurrentDate] = useState(new Date());
-
-  const now = currentDate;
+  const now = new Date();
   let year = now.getFullYear();
   let month = now.getMonth() + 1;
   if(month == 12) {
