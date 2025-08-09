@@ -23,12 +23,12 @@ export interface Calendar {
 export async function getNewsList(): Promise<News[]> {
   const data = await client.get({
     endpoint: "news",
-    // customRequestInit: {
-    //   cache: 'force-cache',
-    //   next: {
-    //     revalidate: 3600 
-    //   }
-    // }
+    customRequestInit: {
+      cache: 'force-cache',
+      next: {
+        revalidate: 60 * 60 * 2
+      }
+    }
   });
   return data.contents;
 }
@@ -38,17 +38,25 @@ export async function getNews(id: string): Promise<News> {
     endpoint: "news",
     contentId: id,
     
-    // customRequestInit: {
-    //   cache: 'force-cache',
-    //   next: {
-    //     revalidate: 3600 
-    //   }
-    // }
+    customRequestInit: {
+      cache: 'force-cache',
+      next: {
+        revalidate: 60 * 60 * 2
+      }
+    }
   });
   return data;
 }
 
 export async function getCalendarList(): Promise<Calendar[]> {
-  const data = await client.get({ endpoint: "calendar" });
+  const data = await client.get({ 
+    endpoint: "calendar",
+    customRequestInit: {
+      cache: 'force-cache',
+      next: {
+        revalidate: 60 * 60 * 2
+      }
+    }
+  });
   return data.contents;
 }
