@@ -449,38 +449,38 @@ const merchandises: merchandisesType[] = [
 
 const pickupRanking: pickupMerchandisesType[] = [
   {
-    title: '牛 サガリ (タレ)',
-    price: 500,
-    category: 'grilled',
+    title: '彩美牛 肩ロース',
+    price: 730,
+    category: 'saibi',
     amount: '100g',
     ranking: 1
   },
   {
-    title: '豚 ホルモン (塩タレ)',
-    price: 180,
-    category: 'grilled',
+    title: 'ラム',
+    price: 240,
+    category: 'sukiyaki',
     amount: '100g',
     ranking: 2
-  },
-  {
-    title: '豚 サガリ (塩タレ)',
-    price: 550,
-    category: 'grilled',
-    amount: '300g 1p',
-    ranking: 3
-  },
-  {
-    title: 'ラム肉 (ジンタレ)',
-    price: 240,
-    category: 'grilled',
-    amount: '100g',
-    ranking: 4
   },
   {
     title: '牛 タン',
     price: 600,
     category: 'grilled',
     amount: '1本売り (約800g〜)',
+    ranking: 3
+  },
+  {
+    title: '牛 サガリ',
+    price: 500,
+    category: 'grilled',
+    amount: '100g',
+    ranking: 4
+  },
+  {
+    title: '豚 サガリ',
+    price: 550,
+    category: 'grilled',
+    amount: '300g 1p',
     ranking: 5
   },
 ]
