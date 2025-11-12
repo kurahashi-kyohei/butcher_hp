@@ -449,7 +449,7 @@ const merchandises: merchandisesType[] = [
 
 const pickupRanking: pickupMerchandisesType[] = [
   {
-    title: '彩美牛 肩ロース <br /> (ステーキ すき焼き等に)',
+    title: '彩美牛 肩ロース',
     price: 730,
     category: 'saibi',
     amount: '100g',
