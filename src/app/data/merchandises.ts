@@ -449,35 +449,35 @@ const merchandises: merchandisesType[] = [
 
 const pickupRanking: pickupMerchandisesType[] = [
   {
-    title: '彩美牛 肩ロース',
+    title: '彩美牛 肩ロース（すき焼き用）',
     price: 730,
     category: 'saibi',
     amount: '100g',
     ranking: 1
   },
   {
-    title: 'ラム',
+    title: 'ラム（ジンギスカン用、しゃぶしゃぶ用）',
     price: 240,
     category: 'sukiyaki',
     amount: '100g',
     ranking: 2
   },
   {
-    title: '牛 タン',
+    title: '牛 タン（焼肉用・しゃぶしゃぶ用）',
     price: 600,
     category: 'grilled',
     amount: '1本売り (約800g〜)',
     ranking: 3
   },
   {
-    title: '牛 サガリ',
+    title: '牛 サガリ（焼肉用）',
     price: 500,
     category: 'grilled',
     amount: '100g',
     ranking: 4
   },
   {
-    title: '豚 サガリ',
+    title: '豚 サガリ（塩タレ付）',
     price: 550,
     category: 'grilled',
     amount: '300g 1p',
